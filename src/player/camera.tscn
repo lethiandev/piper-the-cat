@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://camera/camera_boom.gd" type="Script" id=1]
+[ext_resource path="res://player/camera_boom.gd" type="Script" id=1]
 
 [node name="CameraBoom" type="RayCast"]
 cast_to = Vector3( 0, 0, 3.5 )
