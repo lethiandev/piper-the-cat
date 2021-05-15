@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://effects/score_label/score_label.gd" type="Script" id=1]
+[ext_resource path="res://interface/fonts/grinched_regular_x32.font.tres" type="DynamicFont" id=2]
+
+[node name="ScoreLabel" type="Label"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 2 )
+text = "100"
+align = 1
+valign = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
