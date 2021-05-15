@@ -2,7 +2,7 @@ extends RigidBody
 
 signal item_moved()
 
-export var move_score: int = 10
+export var move_score: int = 50
 
 var has_moved = false
 
