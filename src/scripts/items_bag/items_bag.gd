@@ -19,6 +19,7 @@ func _on_item_moved(p_item: Node) -> void:
 	score_label.follow_origin = p_item.global_transform.origin
 	add_child(score_label)
 	
+	GameState.add_score(p_item.move_score)
 	$TouchStreamPlayer.play()
 
 func _on_item_shattered(p_item: Node) -> void:
@@ -32,4 +33,5 @@ func _on_item_shattered(p_item: Node) -> void:
 	shatter_node.transform = p_item.transform
 	add_child(shatter_node)
 	
+	GameState.add_score(p_item.shatter_score)
 	$ShatterStreamPlayer.play()
