@@ -12,11 +12,8 @@ func _integrate_forces(p_state: PhysicsDirectBodyState) -> void:
 	
 	var lv = p_state.linear_velocity
 	
-	for index in range(p_state.get_contact_count()):
-		var body = p_state.get_contact_collider_object(index)
-		if body is StaticBody:
-			_handle_collision(lv)
-			break
+	if p_state.get_contact_count() > 0:
+		_handle_collision(lv)
 	
 	previous_velocity = lv
 
