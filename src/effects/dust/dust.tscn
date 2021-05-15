@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://effects/dust/dust.mesh.tres" type="QuadMesh" id=1]
+
+[sub_resource type="Curve" id=2]
+max_value = 100.0
+_data = [ Vector2( 0, 1 ), 0.0, 10.041, 0, 0, Vector2( 1, 100 ), 367.699, 0.0, 0, 0 ]
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0, 0.490909 ), 0.0, -0.0211302, 0, 0, Vector2( 1, 1 ), 0.509091, 0.0, 1, 0 ]
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.100671, 0.624161, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0.929412, 1, 1, 1, 0.0823529 )
+
+[node name="DustParticles" type="CPUParticles"]
+emitting = false
+amount = 3
+lifetime = 0.4
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 0.4
+mesh = ExtResource( 1 )
+flag_disable_z = true
+direction = Vector3( 0, 0, 1 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 1.5
+initial_velocity_random = 0.2
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+orbit_velocity_curve = null
+damping = 0.06
+damping_curve = SubResource( 2 )
+scale_amount = 2.4
+scale_amount_random = 0.5
+scale_amount_curve = SubResource( 3 )
+color_ramp = SubResource( 4 )
+
+[connection signal="ready" from="." to="." method="restart"]

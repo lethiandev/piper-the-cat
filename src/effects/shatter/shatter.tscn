@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://effects/stars/stars.tscn" type="PackedScene" id=1]
+[ext_resource path="res://effects/dust/dust.tscn" type="PackedScene" id=2]
+[ext_resource path="res://effects/shatter/billboard.gd" type="Script" id=3]
+
+[node name="ShatterEffect" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="DustParticles" parent="." instance=ExtResource( 2 )]
+
+[node name="StarParticles" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0208294 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="queue_free"]

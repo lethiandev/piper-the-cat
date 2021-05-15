@@ -1,6 +1,7 @@
 extends Node
 
 const ScoreLabelScene = preload("res://interface/score_label/score_label.tscn")
+const ShatterEffectScene = preload("res://effects/shatter/shatter.tscn")
 
 func _ready():
 	for child in get_children():
@@ -24,3 +25,7 @@ func _on_item_shattered(p_item: Node) -> void:
 	score_label.follow_origin = p_item.global_transform.origin
 	score_label.modulate = Color.yellow
 	add_child(score_label)
+	
+	var shatter_node = ShatterEffectScene.instance()
+	shatter_node.transform = p_item.transform
+	add_child(shatter_node)
