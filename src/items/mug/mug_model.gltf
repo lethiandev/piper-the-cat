@@ -1,0 +1,105 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.5.17",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Mug",
+            "translation" : [
+                0.6351761817932129,
+                0,
+                0
+            ]
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Mug",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 126,
+            "max" : [
+                0.21824370324611664,
+                0.1488843411207199,
+                0.12402703613042831
+            ],
+            "min" : [
+                -0.12402703613042831,
+                -0.1593499481678009,
+                -0.12402703613042831
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 126,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 126,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 360,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 1512,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1512,
+            "byteOffset" : 1512
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1008,
+            "byteOffset" : 3024
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 720,
+            "byteOffset" : 4032
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 4752,
+            "uri" : "mug_model.bin"
+        }
+    ]
+}

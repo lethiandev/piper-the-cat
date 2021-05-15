@@ -1,0 +1,100 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.5.17",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Plate"
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Plate",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 88,
+            "max" : [
+                0.3810989260673523,
+                0.04377942532300949,
+                0.38109880685806274
+            ],
+            "min" : [
+                -0.3810986876487732,
+                -0.046283408999443054,
+                -0.38109874725341797
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 88,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 88,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 240,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 1056,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1056,
+            "byteOffset" : 1056
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 704,
+            "byteOffset" : 2112
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 480,
+            "byteOffset" : 2816
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 3296,
+            "uri" : "plate_model.bin"
+        }
+    ]
+}

@@ -1,0 +1,105 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.5.17",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Book",
+            "translation" : [
+                -0.6351760029792786,
+                0,
+                0
+            ]
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Book",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 32,
+            "max" : [
+                0.0774882510304451,
+                0.39980003237724304,
+                0.30189675092697144
+            ],
+            "min" : [
+                -0.0774882510304451,
+                -0.39980003237724304,
+                -0.30877771973609924
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 32,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 32,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 60,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 384,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 384,
+            "byteOffset" : 384
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 256,
+            "byteOffset" : 768
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 120,
+            "byteOffset" : 1024
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1144,
+            "uri" : "book_model.bin"
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player/camera.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://scripts/items_bag/items_bag.tscn" type="PackedScene" id=5]
 [ext_resource path="res://interface/game_hud/game_hud.tscn" type="PackedScene" id=6]
 [ext_resource path="res://stages/playground/playground.gd" type="Script" id=7]
+[ext_resource path="res://furnitures/table/table.tscn" type="PackedScene" id=8]
+[ext_resource path="res://items/book/book.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -23,27 +25,6 @@ size = Vector3( 10, 1, 10 )
 [sub_resource type="ConvexPolygonShape" id=4]
 points = PoolVector3Array( -5, 0.5, 5, 5, 0.5, -5, 5, 0.5, 5, -5, 0.5, -5, -5, -0.5, 5, 5, -0.5, -5, 5, -0.5, 5, -5, -0.5, -5, 5, 0.5, 5, -5, 0.5, -5, 5, 0.5, -5, -5, 0.5, 5, 5, -0.5, 5, -5, -0.5, -5, 5, -0.5, -5, -5, -0.5, 5, 5, 0.5, 5, -5, -0.5, 5, -5, 0.5, 5, 5, -0.5, 5, 5, 0.5, -5, -5, -0.5, -5, -5, 0.5, -5, 5, -0.5, -5 )
 
-[sub_resource type="CubeMesh" id=5]
-size = Vector3( 4, 0.2, 2 )
-
-[sub_resource type="ConvexPolygonShape" id=6]
-points = PoolVector3Array( -2, 0.1, 1, 2, 0.1, -1, 2, 0.1, 1, -2, 0.1, -1, -2, -0.1, 1, 2, -0.1, -1, 2, -0.1, 1, -2, -0.1, -1, 2, 0.1, 1, -2, 0.1, -1, 2, 0.1, -1, -2, 0.1, 1, 2, -0.1, 1, -2, -0.1, -1, 2, -0.1, -1, -2, -0.1, 1, 2, 0.1, 1, -2, -0.1, 1, -2, 0.1, 1, 2, -0.1, 1, 2, 0.1, -1, -2, -0.1, -1, -2, 0.1, -1, 2, -0.1, -1 )
-
-[sub_resource type="CubeMesh" id=7]
-size = Vector3( 0.2, 1, 0.2 )
-
-[sub_resource type="ConvexPolygonShape" id=8]
-points = PoolVector3Array( -0.1, 0.5, 0.1, 0.1, 0.5, -0.1, 0.1, 0.5, 0.1, -0.1, 0.5, -0.1, -0.1, -0.5, 0.1, 0.1, -0.5, -0.1, 0.1, -0.5, 0.1, -0.1, -0.5, -0.1, 0.1, 0.5, 0.1, -0.1, 0.5, -0.1, 0.1, 0.5, -0.1, -0.1, 0.5, 0.1, 0.1, -0.5, 0.1, -0.1, -0.5, -0.1, 0.1, -0.5, -0.1, -0.1, -0.5, 0.1, 0.1, 0.5, 0.1, -0.1, -0.5, 0.1, -0.1, 0.5, 0.1, 0.1, -0.5, 0.1, 0.1, 0.5, -0.1, -0.1, -0.5, -0.1, -0.1, 0.5, -0.1, 0.1, -0.5, -0.1 )
-
-[sub_resource type="ConvexPolygonShape" id=9]
-points = PoolVector3Array( -0.1, 0.5, 0.1, 0.1, 0.5, -0.1, 0.1, 0.5, 0.1, -0.1, 0.5, -0.1, -0.1, -0.5, 0.1, 0.1, -0.5, -0.1, 0.1, -0.5, 0.1, -0.1, -0.5, -0.1, 0.1, 0.5, 0.1, -0.1, 0.5, -0.1, 0.1, 0.5, -0.1, -0.1, 0.5, 0.1, 0.1, -0.5, 0.1, -0.1, -0.5, -0.1, 0.1, -0.5, -0.1, -0.1, -0.5, 0.1, 0.1, 0.5, 0.1, -0.1, -0.5, 0.1, -0.1, 0.5, 0.1, 0.1, -0.5, 0.1, 0.1, 0.5, -0.1, -0.1, -0.5, -0.1, -0.1, 0.5, -0.1, 0.1, -0.5, -0.1 )
-
-[sub_resource type="ConvexPolygonShape" id=10]
-points = PoolVector3Array( -0.1, 0.5, 0.1, 0.1, 0.5, -0.1, 0.1, 0.5, 0.1, -0.1, 0.5, -0.1, -0.1, -0.5, 0.1, 0.1, -0.5, -0.1, 0.1, -0.5, 0.1, -0.1, -0.5, -0.1, 0.1, 0.5, 0.1, -0.1, 0.5, -0.1, 0.1, 0.5, -0.1, -0.1, 0.5, 0.1, 0.1, -0.5, 0.1, -0.1, -0.5, -0.1, 0.1, -0.5, -0.1, -0.1, -0.5, 0.1, 0.1, 0.5, 0.1, -0.1, -0.5, 0.1, -0.1, 0.5, 0.1, 0.1, -0.5, 0.1, 0.1, 0.5, -0.1, -0.1, -0.5, -0.1, -0.1, 0.5, -0.1, 0.1, -0.5, -0.1 )
-
-[sub_resource type="ConvexPolygonShape" id=11]
-points = PoolVector3Array( -0.1, 0.5, 0.1, 0.1, 0.5, -0.1, 0.1, 0.5, 0.1, -0.1, 0.5, -0.1, -0.1, -0.5, 0.1, 0.1, -0.5, -0.1, 0.1, -0.5, 0.1, -0.1, -0.5, -0.1, 0.1, 0.5, 0.1, -0.1, 0.5, -0.1, 0.1, 0.5, -0.1, -0.1, 0.5, 0.1, 0.1, -0.5, 0.1, -0.1, -0.5, -0.1, 0.1, -0.5, -0.1, -0.1, -0.5, 0.1, 0.1, 0.5, 0.1, -0.1, -0.5, 0.1, -0.1, 0.5, 0.1, 0.1, -0.5, 0.1, 0.1, 0.5, -0.1, -0.1, -0.5, -0.1, -0.1, 0.5, -0.1, 0.1, -0.5, -0.1 )
-
 [node name="PlaygroundStage" type="Node"]
 script = ExtResource( 7 )
 
@@ -57,87 +38,47 @@ transform = Transform( 0.707107, 0.353553, -0.612373, 0, 0.866025, 0.5, 0.707107
 light_energy = 0.3
 shadow_enabled = true
 
-[node name="Floor" type="StaticBody" parent="."]
+[node name="Kitchen" type="Spatial" parent="."]
+
+[node name="Floor" type="StaticBody" parent="Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0 )
 collision_layer = 3
 
-[node name="MeshInstance" type="MeshInstance" parent="Floor"]
+[node name="MeshInstance" type="MeshInstance" parent="Kitchen/Floor"]
 mesh = SubResource( 3 )
 material/0 = null
 
-[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+[node name="CollisionShape" type="CollisionShape" parent="Kitchen/Floor"]
 shape = SubResource( 4 )
 
-[node name="Table" type="StaticBody" parent="."]
-transform = Transform( 0.930238, 0, 0.366956, 0, 1, 0, -0.366956, 0, 0.930238, 0.0725471, 0.273522, 0.519927 )
+[node name="Table" parent="Kitchen" instance=ExtResource( 8 )]
+transform = Transform( 0.36343, 0, -0.931621, 0, 1, 0, 0.931621, 0, 0.36343, 0, 0, 0 )
 
-[node name="MeshInstance" type="MeshInstance" parent="Table"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06751, 0 )
-mesh = SubResource( 5 )
-material/0 = null
+[node name="ItemsBag" parent="." instance=ExtResource( 5 )]
 
-[node name="CollisionShape" type="CollisionShape" parent="Table"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06751, 0 )
-shape = SubResource( 6 )
+[node name="Plate" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( -2.58088e-08, -0.590437, -0.807084, 1, -4.37114e-08, 0, -3.52788e-08, -0.807084, 0.590437, 0.0832714, 1.86956, -0.181178 )
 
-[node name="MeshInstance2" type="MeshInstance" parent="Table"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8, 0.467507, 0.8 )
-mesh = SubResource( 7 )
-material/0 = null
+[node name="Plate2" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( -2.88851e-08, -0.660814, -0.75055, 1, -4.37114e-08, 0, -3.28076e-08, -0.75055, 0.660814, 0.31263, 1.86956, 0.0446113 )
 
-[node name="CollisionShape2" type="CollisionShape" parent="Table"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8, 0.467507, 0.8 )
-shape = SubResource( 8 )
+[node name="Plate3" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( -2.88851e-08, -0.660814, -0.75055, 1, -4.37114e-08, 0, -3.28076e-08, -0.75055, 0.660814, 0.623787, 1.86956, 0.140774 )
 
-[node name="MeshInstance3" type="MeshInstance" parent="Table"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 0.467507, 0.8 )
-mesh = SubResource( 7 )
-material/0 = null
+[node name="Plate4" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( -2.88851e-08, -0.660814, -0.75055, 1, -4.37114e-08, 0, -3.28076e-08, -0.75055, 0.660814, 0.841453, 1.86956, 0.366013 )
 
-[node name="CollisionShape3" type="CollisionShape" parent="Table"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 0.467507, 0.8 )
-shape = SubResource( 9 )
+[node name="Plate5" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( -3.14486e-08, -0.719461, -0.694533, 1, -4.37114e-08, 0, -3.0359e-08, -0.694533, 0.719461, 1.11978, 1.86956, 0.525485 )
 
-[node name="MeshInstance4" type="MeshInstance" parent="Table"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 0.467507, -0.8 )
-mesh = SubResource( 7 )
-material/0 = null
+[node name="Mug" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10382, 1.73853, 0.954002 )
 
-[node name="CollisionShape4" type="CollisionShape" parent="Table"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 0.467507, -0.8 )
-shape = SubResource( 10 )
-
-[node name="MeshInstance5" type="MeshInstance" parent="Table"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8, 0.467507, -0.8 )
-mesh = SubResource( 7 )
-material/0 = null
-
-[node name="CollisionShape5" type="CollisionShape" parent="Table"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8, 0.467507, -0.8 )
-shape = SubResource( 11 )
+[node name="BookItem" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 0.932582, 0, 0.360957, 0, 1, 0, -0.360957, 0, 0.932582, -1.65158, 1.8911, -0.0124609 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03078, 0.3, -1.47682 )
 
 [node name="CameraBoom" parent="Player" instance=ExtResource( 2 )]
 transform = Transform( -0.377421, -0.654811, 0.654811, 0, 0.707107, 0.707107, -0.926042, 0.266877, -0.266877, 0, 0, 0 )
-
-[node name="ItemsBag" parent="." instance=ExtResource( 5 )]
-
-[node name="Plate" parent="ItemsBag" instance=ExtResource( 3 )]
-transform = Transform( -2.58088e-08, -0.590437, -0.807084, 1, -4.37114e-08, 0, -3.52788e-08, -0.807084, 0.590437, 0.0832714, 1.85323, -0.181178 )
-
-[node name="Plate2" parent="ItemsBag" instance=ExtResource( 3 )]
-transform = Transform( -2.88851e-08, -0.660814, -0.75055, 1, -4.37114e-08, 0, -3.28076e-08, -0.75055, 0.660814, 0.31263, 1.85323, 0.0446113 )
-
-[node name="Plate3" parent="ItemsBag" instance=ExtResource( 3 )]
-transform = Transform( -2.88851e-08, -0.660814, -0.75055, 1, -4.37114e-08, 0, -3.28076e-08, -0.75055, 0.660814, 0.623787, 1.85323, 0.140774 )
-
-[node name="Plate4" parent="ItemsBag" instance=ExtResource( 3 )]
-transform = Transform( -2.88851e-08, -0.660814, -0.75055, 1, -4.37114e-08, 0, -3.28076e-08, -0.75055, 0.660814, 0.841453, 1.85323, 0.366013 )
-
-[node name="Plate5" parent="ItemsBag" instance=ExtResource( 3 )]
-transform = Transform( -3.14486e-08, -0.719461, -0.694533, 1, -4.37114e-08, 0, -3.0359e-08, -0.694533, 0.719461, 1.11978, 1.85323, 0.525485 )
-
-[node name="Mug" parent="ItemsBag" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10382, 1.69176, 0.954002 )
