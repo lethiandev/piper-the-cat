@@ -12,7 +12,10 @@ func _update_ready_label(p_timer: Timer) -> void:
 	
 	if p_timer.is_stopped():
 		text = "Go!"
+		modulate = Color.green
 	elif time_left < ready_frame:
 		text = "Steady"
+		modulate = Color.orange
 	else:
 		text = "Ready"
+		modulate = Color.red
