@@ -1,8 +1,25 @@
 extends Control
 
-export var timer_node: NodePath
+func _ready() -> void:
+	GameState.connect("game_started", self, "_on_game_started")
+	GameState.connect("game_ready", self, "_on_game_ready")
+	GameState.connect("game_ended", self, "_on_game_ended")
+	GameState.connect("score_changed", self, "_on_score_changed")
+	
+	$HideTimer.connect("timeout", $ReadyLabel, "set_visible", [false])
+	
+	$ReadyLabel.timer_node = "/root/GameState/ReadyTimer"
+	$TimerLabel.timer_node = "/root/GameState/GameTimer"
 
-func _ready():
-	if has_node(timer_node):
-		var timer = get_node(timer_node)
-		$TimerLabel.timer_node = timer.get_path()
+func _on_game_started() -> void:
+	_on_score_changed()
+
+func _on_game_ready() -> void:
+	$HideTimer.start()
+
+func _on_game_ended() -> void:
+	pass
+
+func _on_score_changed() -> void:
+	var score = GameState.get_score()
+	$Score.text = str(score)
