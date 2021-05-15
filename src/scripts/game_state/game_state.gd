@@ -15,11 +15,13 @@ func _ready() -> void:
 
 func game_start(p_time: float) -> void:
 	$ReadyTimer.start()
-	$GameTimer.stop()
-	$GameTimer.wait_time = p_time
+	$GameTimer.start(p_time)
+	$GameTimer.set_paused(true)
 	score = 0
+	emit_signal("game_started")
 
 func game_ready() -> void:
+	$GameTimer.set_paused(false)
 	emit_signal("game_ready")
 
 func game_end() -> void:
