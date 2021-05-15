@@ -13,7 +13,7 @@ func _ready() -> void:
 	var scale_from = rect_scale * 0.4
 	var scale_to = rect_scale
 	$Tween.interpolate_property(self, NodePath("rect_scale"),
-		scale_from, scale_to, 1.0, Tween.TRANS_EXPO, Tween.EASE_IN_OUT)
+		scale_from, scale_to, 1.0, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	$Tween.connect("tween_all_completed", self, "queue_free")
 	$Tween.start()
 
