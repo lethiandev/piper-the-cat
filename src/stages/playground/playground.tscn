@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://camera/camera.tscn" type="PackedScene" id=2]
 [ext_resource path="res://items/plate/plate.tscn" type="PackedScene" id=3]
 [ext_resource path="res://items/mug/mug.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/items_bag/items_bag.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -116,20 +117,22 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03078, 0.3, -1.47682 )
 [node name="CameraBoom" parent="Player" instance=ExtResource( 2 )]
 transform = Transform( -0.377421, -0.654811, 0.654811, 0, 0.707107, 0.707107, -0.926042, 0.266877, -0.266877, 0, 0, 0 )
 
-[node name="Plate" parent="." instance=ExtResource( 3 )]
+[node name="ItemsBag" parent="." instance=ExtResource( 5 )]
+
+[node name="Plate" parent="ItemsBag" instance=ExtResource( 3 )]
 transform = Transform( -2.58088e-08, -0.590437, -0.807084, 1, -4.37114e-08, 0, -3.52788e-08, -0.807084, 0.590437, 0.0832714, 1.85323, -0.181178 )
 
-[node name="Plate2" parent="." instance=ExtResource( 3 )]
+[node name="Plate2" parent="ItemsBag" instance=ExtResource( 3 )]
 transform = Transform( -2.88851e-08, -0.660814, -0.75055, 1, -4.37114e-08, 0, -3.28076e-08, -0.75055, 0.660814, 0.31263, 1.85323, 0.0446113 )
 
-[node name="Plate3" parent="." instance=ExtResource( 3 )]
+[node name="Plate3" parent="ItemsBag" instance=ExtResource( 3 )]
 transform = Transform( -2.88851e-08, -0.660814, -0.75055, 1, -4.37114e-08, 0, -3.28076e-08, -0.75055, 0.660814, 0.623787, 1.85323, 0.140774 )
 
-[node name="Plate4" parent="." instance=ExtResource( 3 )]
+[node name="Plate4" parent="ItemsBag" instance=ExtResource( 3 )]
 transform = Transform( -2.88851e-08, -0.660814, -0.75055, 1, -4.37114e-08, 0, -3.28076e-08, -0.75055, 0.660814, 0.841453, 1.85323, 0.366013 )
 
-[node name="Plate5" parent="." instance=ExtResource( 3 )]
+[node name="Plate5" parent="ItemsBag" instance=ExtResource( 3 )]
 transform = Transform( -3.14486e-08, -0.719461, -0.694533, 1, -4.37114e-08, 0, -3.0359e-08, -0.694533, 0.719461, 1.11978, 1.85323, 0.525485 )
 
-[node name="Mug" parent="." instance=ExtResource( 4 )]
+[node name="Mug" parent="ItemsBag" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10382, 1.69176, 0.954002 )
