@@ -17,6 +17,7 @@ contacts_reported = 3
 contact_monitor = true
 sleeping = true
 script = ExtResource( 1 )
+shatter_force = 25.0
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 mesh = SubResource( 1 )
