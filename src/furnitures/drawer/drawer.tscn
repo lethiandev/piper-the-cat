@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://furnitures/drawer/drawer_model.gltf" type="PackedScene" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.86815, 0.0318277, 0.336702 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.901471, 0.0274762, 0.425045 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.0220418, 0.667847, 0.425951 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.90614, 0.667847, 0.052345 )
+
+[node name="Drawer" type="StaticBody"]
+
+[node name="DrawerModel" parent="." instance=ExtResource( 1 )]
+
+[node name="Drawer" parent="DrawerModel" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.111576, 0.387515 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.799834, 0.375614 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.567696, 0.375614 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.881765, 0.121393, 0.375614 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape5" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.882, 0.121, 0.376 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape6" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.121, 0 )
+shape = SubResource( 4 )
+
+[editable path="DrawerModel"]
