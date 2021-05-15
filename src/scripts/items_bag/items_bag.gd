@@ -1,6 +1,6 @@
 extends Node
 
-const ScoreLabelScene = preload("res://effects/score_label/score_label.tscn")
+const ScoreLabelScene = preload("res://interface/score_label/score_label.tscn")
 
 func _ready():
 	for child in get_children():
