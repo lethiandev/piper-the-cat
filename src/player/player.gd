@@ -4,6 +4,7 @@ const GRAVITY = 20
 const ACCELERATION = 4.0
 const DECELERATION = 6.0
 const MAX_SPEED = 5
+const JUMP_SPEED = 6
 const PUSH = 50
 
 var motion_axis = Vector3()
@@ -49,7 +50,7 @@ func _physics_process(p_delta: float) -> void:
 	var grounded = not is_airborne and not is_jumping
 	if Input.is_action_pressed("ui_accept") and grounded:
 		is_jumping = true
-		yspeed = 6
+		yspeed = JUMP_SPEED
 	
 	if Input.is_action_just_released("ui_accept") or yspeed < 0:
 		is_jumping = false
