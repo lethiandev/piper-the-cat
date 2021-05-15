@@ -18,6 +18,8 @@ func _on_item_moved(p_item: Node) -> void:
 	score_label.text = str(p_item.move_score)
 	score_label.follow_origin = p_item.global_transform.origin
 	add_child(score_label)
+	
+	$TouchStreamPlayer.play()
 
 func _on_item_shattered(p_item: Node) -> void:
 	var score_label = ScoreLabelScene.instance()
@@ -29,3 +31,5 @@ func _on_item_shattered(p_item: Node) -> void:
 	var shatter_node = ShatterEffectScene.instance()
 	shatter_node.transform = p_item.transform
 	add_child(shatter_node)
+	
+	$ShatterStreamPlayer.play()
