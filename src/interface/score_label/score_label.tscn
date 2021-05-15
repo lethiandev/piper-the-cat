@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://interface/score_label/score_label.gd" type="Script" id=1]
-[ext_resource path="res://interface/fonts/grinched_regular_x32.font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://interface/fonts/default.tres" type="DynamicFont" id=2]
 
 [node name="ScoreLabel" type="Label"]
 margin_right = 40.0
