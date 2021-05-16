@@ -37,7 +37,7 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 88,
+            "count" : 66,
             "max" : [
                 0.3810989260673523,
                 0.04377942532300949,
@@ -53,13 +53,13 @@
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 88,
+            "count" : 66,
             "type" : "VEC3"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 88,
+            "count" : 66,
             "type" : "VEC2"
         },
         {
@@ -72,28 +72,28 @@
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 1056,
+            "byteLength" : 792,
             "byteOffset" : 0
         },
         {
             "buffer" : 0,
-            "byteLength" : 1056,
-            "byteOffset" : 1056
+            "byteLength" : 792,
+            "byteOffset" : 792
         },
         {
             "buffer" : 0,
-            "byteLength" : 704,
-            "byteOffset" : 2112
+            "byteLength" : 528,
+            "byteOffset" : 1584
         },
         {
             "buffer" : 0,
             "byteLength" : 480,
-            "byteOffset" : 2816
+            "byteOffset" : 2112
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 3296,
+            "byteLength" : 2592,
             "uri" : "plate_model.bin"
         }
     ]

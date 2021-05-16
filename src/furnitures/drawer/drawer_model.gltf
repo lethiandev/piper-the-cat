@@ -42,7 +42,7 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 94,
+            "count" : 92,
             "max" : [
                 1.1952263116836548,
                 0.989590585231781,
@@ -58,13 +58,13 @@
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 94,
+            "count" : 92,
             "type" : "VEC3"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 94,
+            "count" : 92,
             "type" : "VEC2"
         },
         {
@@ -77,28 +77,28 @@
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 1128,
+            "byteLength" : 1104,
             "byteOffset" : 0
         },
         {
             "buffer" : 0,
-            "byteLength" : 1128,
-            "byteOffset" : 1128
+            "byteLength" : 1104,
+            "byteOffset" : 1104
         },
         {
             "buffer" : 0,
-            "byteLength" : 752,
-            "byteOffset" : 2256
+            "byteLength" : 736,
+            "byteOffset" : 2208
         },
         {
             "buffer" : 0,
             "byteLength" : 288,
-            "byteOffset" : 3008
+            "byteOffset" : 2944
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 3296,
+            "byteLength" : 3232,
             "uri" : "drawer_model.bin"
         }
     ]

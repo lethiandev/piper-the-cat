@@ -46,7 +46,7 @@
             "max" : [
                 1.1260548830032349,
                 4.629883289337158,
-                0.13059251010417938
+                0.2366187572479248
             ],
             "min" : [
                 -1.1260548830032349,
@@ -70,7 +70,7 @@
         {
             "bufferView" : 3,
             "componentType" : 5123,
-            "count" : 96,
+            "count" : 114,
             "type" : "SCALAR"
         }
     ],
@@ -92,13 +92,13 @@
         },
         {
             "buffer" : 0,
-            "byteLength" : 192,
+            "byteLength" : 228,
             "byteOffset" : 2048
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 2240,
+            "byteLength" : 2276,
             "uri" : "doors_model.bin"
         }
     ]

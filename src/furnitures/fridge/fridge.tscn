@@ -1,33 +1,34 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://furnitures/fridge/fridge_model.gltf" type="PackedScene" id=1]
 [ext_resource path="res://furnitures/fridge/doors_model.gltf" type="PackedScene" id=2]
+[ext_resource path="res://materials/tileset.material.tres" type="Material" id=3]
 
-[sub_resource type="BoxShape" id=2]
+[sub_resource type="BoxShape" id=1]
 extents = Vector3( 1.1281, 0.101732, 0.896035 )
 
-[sub_resource type="BoxShape" id=4]
+[sub_resource type="BoxShape" id=2]
 extents = Vector3( 1.1281, 0.0472487, 0.876841 )
 
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 1.1281, 0.0472487, 0.81959 )
 
-[sub_resource type="BoxShape" id=5]
+[sub_resource type="BoxShape" id=4]
 extents = Vector3( 1.13973, 0.0680517, 0.896035 )
 
-[sub_resource type="BoxShape" id=6]
+[sub_resource type="BoxShape" id=5]
 extents = Vector3( 0.0535355, 2.28227, 0.896035 )
 
-[sub_resource type="BoxShape" id=7]
+[sub_resource type="BoxShape" id=6]
 extents = Vector3( 1.04628, 2.282, 0.069 )
 
-[sub_resource type="BoxShape" id=9]
+[sub_resource type="BoxShape" id=7]
 extents = Vector3( 1.03475, 0.456566, 0.341563 )
 
 [sub_resource type="BoxShape" id=8]
 extents = Vector3( 1.03475, 0.114384, 0.341563 )
 
-[sub_resource type="BoxShape" id=1]
+[sub_resource type="BoxShape" id=9]
 extents = Vector3( 1.11676, 2.24009, 0.104982 )
 
 [node name="Fridge" type="StaticBody"]
@@ -36,14 +37,15 @@ extents = Vector3( 1.11676, 2.24009, 0.104982 )
 
 [node name="Fridge" parent="FridgeModel" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+material/0 = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.115323, 0.0638475 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18133, 0.0651818 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3738, 0.0651818 )
@@ -55,23 +57,23 @@ shape = SubResource( 3 )
 
 [node name="CollisionShape5" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.57025, 0.0638475 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape6" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09137, 2.29243, 0.0638475 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape7" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.091, 2.292, 0.064 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape8" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.292, -0.769917 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape9" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.673039, -0.43677 )
-shape = SubResource( 9 )
+shape = SubResource( 7 )
 
 [node name="CollisionShape10" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.965044, -0.262088, 0, 0.262088, 0.965044, 0, 1.21177, -0.43677 )
@@ -85,10 +87,11 @@ angular_damp = 10.0
 
 [node name="FridgeDoors" parent="FridgeDoors/DoorsModel" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.026 )
+material/0 = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="FridgeDoors"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.35334, 1.04217 )
-shape = SubResource( 1 )
+shape = SubResource( 9 )
 
 [node name="HingeJoint" type="HingeJoint" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.08648, 0.573324, 1.04839 )
