@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player/camera.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://items/book/book.tscn" type="PackedScene" id=9]
 [ext_resource path="res://furnitures/drawer/drawer.tscn" type="PackedScene" id=10]
 [ext_resource path="res://furnitures/chair/chair.tscn" type="PackedScene" id=11]
+[ext_resource path="res://furnitures/fridge/fridge.tscn" type="PackedScene" id=12]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -250,6 +251,9 @@ transform = Transform( -0.018674, 0, -0.999826, 0, 1, 0, 0.999826, 0, -0.018674,
 
 [node name="Chair4" parent="Kitchen" instance=ExtResource( 11 )]
 transform = Transform( -0.492909, 0, -0.870081, 0, 1, 0, 0.870081, 0, -0.492909, 0.959635, 4.76837e-07, 0.817183 )
+
+[node name="Fridge" parent="Kitchen" instance=ExtResource( 12 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.77445, 0, 2.47426 )
 
 [node name="Longue" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 3 )
@@ -577,22 +581,25 @@ transform = Transform( -3.14486e-08, -0.719461, -0.694533, 1, -4.37114e-08, 0, -
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.10382, 1.73853, -8.046 )
 
 [node name="Mug2" parent="ItemsBag" instance=ExtResource( 4 )]
-transform = Transform( 0.318662, 0, 0.947869, 0, 1, 0, -0.947869, 0, 0.318662, -4.91511, 2.46007, -9.93296 )
+transform = Transform( 0.318662, 0, 0.947869, 0, 1, 0, -0.947869, 0, 0.318662, -5.23928, 3.62234, -12.2616 )
+
+[node name="Mug3" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( -0.999648, 0, 0.0265437, 0, 1, 0, -0.0265437, 0, -0.999648, -4.97603, 3.62234, -11.9731 )
 
 [node name="BookItem" parent="ItemsBag" instance=ExtResource( 9 )]
 transform = Transform( 0.932582, 0, 0.360957, 0, 1, 0, -0.360957, 0, 0.932582, -5.65158, 1.8911, -9.01246 )
 
 [node name="PlateItem" parent="ItemsBag" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9316, 2.35071, -9.82535 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.39459, 3.51891, -12.1117 )
 
 [node name="PlateItem2" parent="ItemsBag" instance=ExtResource( 3 )]
-transform = Transform( 0.907865, 0, 0.419262, 0, 1, 0, -0.419262, 0, 0.907865, -5.9316, 2.5323, -9.82535 )
+transform = Transform( 0.907865, 0, 0.419262, 0, 1, 0, -0.419262, 0, 0.907865, -6.39459, 3.7005, -12.1117 )
 
 [node name="PlateItem3" parent="ItemsBag" instance=ExtResource( 3 )]
-transform = Transform( 0.810625, 0, -0.585566, 0, 1, 0, 0.585566, 0, 0.810625, -5.9316, 2.71657, -9.82535 )
+transform = Transform( 0.810625, 0, -0.585566, 0, 1, 0, 0.585566, 0, 0.810625, -6.39459, 3.88477, -12.1117 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.04552, 1.07807, 3.45976 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.04552, 1.07807, -6.66997 )
 
 [node name="CameraBoom" parent="Player" instance=ExtResource( 2 )]
 transform = Transform( -0.377421, -0.654811, 0.654811, 0, 0.707107, 0.707107, -0.926042, 0.266877, -0.266877, 0, 0, 0 )
