@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player/camera.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://furnitures/table/table.tscn" type="PackedScene" id=8]
 [ext_resource path="res://items/book/book.tscn" type="PackedScene" id=9]
 [ext_resource path="res://furnitures/drawer/drawer.tscn" type="PackedScene" id=10]
+[ext_resource path="res://furnitures/chair/chair.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -26,40 +27,40 @@ size = Vector3( 12, 2, 8 )
 [sub_resource type="ConvexPolygonShape" id=4]
 points = PoolVector3Array( -6, 1, 4, 6, 1, -4, 6, 1, 4, -6, 1, -4, -6, -1, 4, 6, -1, -4, 6, -1, 4, -6, -1, -4, 6, 1, 4, -6, 1, -4, 6, 1, -4, -6, 1, 4, 6, -1, 4, -6, -1, -4, 6, -1, -4, -6, -1, 4, 6, 1, 4, -6, -1, 4, -6, 1, 4, 6, -1, 4, 6, 1, -4, -6, -1, -4, -6, 1, -4, 6, -1, -4 )
 
-[sub_resource type="BoxShape" id=23]
+[sub_resource type="BoxShape" id=5]
 extents = Vector3( 6, 3, 0.125 )
 
 [sub_resource type="CubeMesh" id=6]
 size = Vector3( 0.25, 6, 8 )
 
-[sub_resource type="BoxShape" id=24]
+[sub_resource type="BoxShape" id=7]
 extents = Vector3( 0.125, 3, 4 )
 
-[sub_resource type="BoxShape" id=25]
+[sub_resource type="BoxShape" id=8]
 extents = Vector3( 0.125, 3, 4 )
 
-[sub_resource type="BoxShape" id=10]
+[sub_resource type="BoxShape" id=9]
 extents = Vector3( 6, 0.75, 0.125 )
 
-[sub_resource type="BoxShape" id=11]
+[sub_resource type="BoxShape" id=10]
 extents = Vector3( 2.375, 2.25, 0.125 )
 
-[sub_resource type="CubeMesh" id=12]
+[sub_resource type="CubeMesh" id=11]
 size = Vector3( 12, 2, 16 )
 
-[sub_resource type="ConvexPolygonShape" id=13]
+[sub_resource type="ConvexPolygonShape" id=12]
 points = PoolVector3Array( -6, 1, 8, 6, 1, -8, 6, 1, 8, -6, 1, -8, -6, -1, 8, 6, -1, -8, 6, -1, 8, -6, -1, -8, 6, 1, 8, -6, 1, -8, 6, 1, -8, -6, 1, 8, 6, -1, 8, -6, -1, -8, 6, -1, -8, -6, -1, 8, 6, 1, 8, -6, -1, 8, -6, 1, 8, 6, -1, 8, 6, 1, -8, -6, -1, -8, -6, 1, -8, 6, -1, -8 )
 
-[sub_resource type="BoxShape" id=21]
+[sub_resource type="BoxShape" id=13]
 extents = Vector3( 6, 0.5, 0.125 )
 
-[sub_resource type="BoxShape" id=22]
+[sub_resource type="BoxShape" id=14]
 extents = Vector3( 2.375, 2.5, 0.125 )
 
-[sub_resource type="BoxShape" id=20]
+[sub_resource type="BoxShape" id=15]
 extents = Vector3( 6, 3, 0.125 )
 
-[sub_resource type="BoxShape" id=14]
+[sub_resource type="BoxShape" id=16]
 extents = Vector3( 0.125, 3, 8 )
 
 [sub_resource type="BoxShape" id=17]
@@ -71,49 +72,49 @@ extents = Vector3( 0.125, 2.5, 2.75 )
 [sub_resource type="BoxShape" id=19]
 extents = Vector3( 0.125, 2.5, 1.375 )
 
-[sub_resource type="CubeMesh" id=15]
+[sub_resource type="CubeMesh" id=20]
 size = Vector3( 8, 2, 16 )
 
-[sub_resource type="ConvexPolygonShape" id=16]
+[sub_resource type="ConvexPolygonShape" id=21]
 points = PoolVector3Array( -4, 1, 8, 4, 1, -8, 4, 1, 8, -4, 1, -8, -4, -1, 8, 4, -1, -8, 4, -1, 8, -4, -1, -8, 4, 1, 8, -4, 1, -8, 4, 1, -8, -4, 1, 8, 4, -1, 8, -4, -1, -8, 4, -1, -8, -4, -1, 8, 4, 1, 8, -4, -1, 8, -4, 1, 8, 4, -1, 8, 4, 1, -8, -4, -1, -8, -4, 1, -8, 4, -1, -8 )
 
-[sub_resource type="BoxShape" id=26]
+[sub_resource type="BoxShape" id=22]
 extents = Vector3( 4, 3, 0.125 )
 
-[sub_resource type="BoxShape" id=27]
+[sub_resource type="BoxShape" id=23]
 extents = Vector3( 4, 3, 0.125 )
 
-[sub_resource type="BoxShape" id=28]
+[sub_resource type="BoxShape" id=24]
 extents = Vector3( 0.125, 3, 8 )
 
-[sub_resource type="BoxShape" id=31]
+[sub_resource type="BoxShape" id=25]
 extents = Vector3( 0.125, 0.5, 8 )
 
-[sub_resource type="BoxShape" id=30]
+[sub_resource type="BoxShape" id=26]
 extents = Vector3( 0.125, 2.5, 1.375 )
 
-[sub_resource type="BoxShape" id=29]
+[sub_resource type="BoxShape" id=27]
 extents = Vector3( 0.125, 2.5, 5.375 )
 
-[sub_resource type="CubeMesh" id=32]
+[sub_resource type="CubeMesh" id=28]
 size = Vector3( 8, 2, 8 )
 
-[sub_resource type="BoxShape" id=33]
+[sub_resource type="BoxShape" id=29]
 extents = Vector3( 4, 1, 4 )
 
-[sub_resource type="CubeMesh" id=34]
+[sub_resource type="CubeMesh" id=30]
 size = Vector3( 8, 6, 0.25 )
 
-[sub_resource type="BoxShape" id=35]
+[sub_resource type="BoxShape" id=31]
 extents = Vector3( 4, 3, 0.125 )
 
-[sub_resource type="CubeMesh" id=36]
+[sub_resource type="CubeMesh" id=32]
 size = Vector3( 0.25, 6, 8 )
 
-[sub_resource type="BoxShape" id=37]
+[sub_resource type="BoxShape" id=33]
 extents = Vector3( 0.125, 3, 4 )
 
-[sub_resource type="BoxShape" id=38]
+[sub_resource type="BoxShape" id=34]
 extents = Vector3( 0.125, 0.5, 4 )
 
 [node name="PlaygroundStage" type="Node"]
@@ -125,7 +126,7 @@ script = ExtResource( 7 )
 environment = SubResource( 2 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="WorldEnvironment"]
-transform = Transform( -0.406621, 0.727293, -0.552905, -0.573717, 0.267706, 0.774068, 0.710991, 0.631964, 0.308406, 0, 4, 0 )
+transform = Transform( -0.406621, 0.727293, -0.552905, -0.573717, 0.267706, 0.774069, 0.710991, 0.631964, 0.308405, 0, 4, 0 )
 light_energy = 0.25
 shadow_enabled = true
 directional_shadow_split_1 = 0.2
@@ -133,12 +134,20 @@ directional_shadow_split_2 = 0.4
 directional_shadow_split_3 = 0.6
 directional_shadow_normal_bias = 0.2
 directional_shadow_max_distance = 25.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="Kitchen" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -9 )
 
 [node name="Kitchen" type="StaticBody" parent="Kitchen"]
 collision_layer = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="Floor" type="MeshInstance" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
@@ -155,9 +164,18 @@ width = 12.0
 height = 6.0
 depth = 0.25
 
+[node name="CSGCombiner" type="CSGCombiner" parent="Kitchen/Kitchen/NorthWall"]
+operation = 2
+
+[node name="WindowHole" type="CSGBox" parent="Kitchen/Kitchen/NorthWall/CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.5, 0 )
+width = 4.0
+height = 3.0
+depth = 4.0
+
 [node name="NorthWallCollision" type="CollisionShape" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -3.875 )
-shape = SubResource( 23 )
+shape = SubResource( 5 )
 
 [node name="EastWall" type="MeshInstance" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.875, 3, 0 )
@@ -166,7 +184,7 @@ material/0 = null
 
 [node name="EastWallCollision" type="CollisionShape" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.875, 3, 0 )
-shape = SubResource( 24 )
+shape = SubResource( 7 )
 
 [node name="WestWall" type="CSGBox" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.875, 3, 0 )
@@ -183,7 +201,7 @@ height = 3.0
 
 [node name="WestWallCollision" type="CollisionShape" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.875, 3, 0 )
-shape = SubResource( 25 )
+shape = SubResource( 8 )
 
 [node name="SouthWall" type="CSGBox" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 3.875 )
@@ -202,36 +220,55 @@ depth = 2.5
 
 [node name="SouthWallCollision" type="CollisionShape" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.25, 3.875 )
-shape = SubResource( 10 )
+shape = SubResource( 9 )
 
 [node name="SouthWallCollision2" type="CollisionShape" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.625, 2.25, 3.875 )
-shape = SubResource( 11 )
+shape = SubResource( 10 )
 
 [node name="SouthWallCollision3" type="CollisionShape" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.625, 2.25, 3.875 )
-shape = SubResource( 11 )
+shape = SubResource( 10 )
 
 [node name="Drawer" parent="Kitchen" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.526997, 3.90828, -3.71065 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.80624, 4.05936, -3.71065 )
+
+[node name="Drawer2" parent="Kitchen" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.12793, 4.05936, -3.71065 )
 
 [node name="Table" parent="Kitchen" instance=ExtResource( 8 )]
 transform = Transform( -0.999863, 0, -0.0165451, 0, 1, 0, 0.0165451, 0, -0.999863, 3.02796, 0, 0.143758 )
+
+[node name="Chair" parent="Kitchen" instance=ExtResource( 11 )]
+transform = Transform( 0.99643, 0, 0.0844257, 0, 1, 0, -0.0844257, 0, 0.99643, 4.39241, 4.76837e-07, -1.17142 )
+
+[node name="Chair2" parent="Kitchen" instance=ExtResource( 11 )]
+transform = Transform( 0.960546, 0, 0.278119, 0, 1, 0, -0.278119, 0, 0.960546, 4.72892, 4.76837e-07, 0.938069 )
+
+[node name="Chair3" parent="Kitchen" instance=ExtResource( 11 )]
+transform = Transform( -0.018674, 0, -0.999826, 0, 1, 0, 0.999826, 0, -0.018674, 2.86013, 4.76837e-07, 2.26587 )
+
+[node name="Chair4" parent="Kitchen" instance=ExtResource( 11 )]
+transform = Transform( -0.492909, 0, -0.870081, 0, 1, 0, 0.870081, 0, -0.492909, 0.959635, 4.76837e-07, 0.817183 )
 
 [node name="Longue" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 3 )
 
 [node name="Longue" type="StaticBody" parent="Longue"]
 collision_layer = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="Floor" type="MeshInstance" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-mesh = SubResource( 12 )
+mesh = SubResource( 11 )
 material/0 = null
 
 [node name="FloorCollision" type="CollisionShape" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-shape = SubResource( 13 )
+shape = SubResource( 12 )
 
 [node name="NorthWall" type="CSGBox" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -7.875 )
@@ -251,15 +288,15 @@ depth = 2.5
 
 [node name="NorthWallCollision" type="CollisionShape" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5, -7.875 )
-shape = SubResource( 21 )
+shape = SubResource( 13 )
 
 [node name="NorthWallCollision2" type="CollisionShape" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.625, 2.5, -7.875 )
-shape = SubResource( 22 )
+shape = SubResource( 14 )
 
 [node name="NorthWallCollision3" type="CollisionShape" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.625, 2.5, -7.875 )
-shape = SubResource( 22 )
+shape = SubResource( 14 )
 
 [node name="SouthWall" type="CSGBox" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 7.875 )
@@ -285,7 +322,7 @@ depth = 4.0
 
 [node name="SouthWallCollision" type="CollisionShape" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 7.875 )
-shape = SubResource( 20 )
+shape = SubResource( 15 )
 
 [node name="WestWall" type="CSGBox" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.875, 3, 0 )
@@ -314,7 +351,7 @@ height = 3.0
 
 [node name="WestWallCollision" type="CollisionShape" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.875, 3, 0 )
-shape = SubResource( 14 )
+shape = SubResource( 16 )
 
 [node name="EastWall" type="CSGBox" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.875, 3, 0 )
@@ -359,15 +396,19 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -5 )
 
 [node name="Bedroom" type="StaticBody" parent="Bedroom"]
 collision_layer = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="Floor" type="MeshInstance" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-mesh = SubResource( 15 )
+mesh = SubResource( 20 )
 material/0 = null
 
 [node name="FloorCollision" type="CollisionShape" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-shape = SubResource( 16 )
+shape = SubResource( 21 )
 
 [node name="NorthWall" type="CSGBox" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -7.875 )
@@ -375,9 +416,16 @@ width = 8.0
 height = 6.0
 depth = 0.25
 
+[node name="CSGCombiner" type="CSGCombiner" parent="Bedroom/Bedroom/NorthWall"]
+operation = 2
+
+[node name="WindowHole" type="CSGBox" parent="Bedroom/Bedroom/NorthWall/CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
+height = 3.0
+
 [node name="NorthWallCollision" type="CollisionShape" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -7.875 )
-shape = SubResource( 26 )
+shape = SubResource( 22 )
 
 [node name="SouthWall" type="CSGBox" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 7.875 )
@@ -387,7 +435,7 @@ depth = 0.25
 
 [node name="SouthWallCollision" type="CollisionShape" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 7.875 )
-shape = SubResource( 27 )
+shape = SubResource( 23 )
 
 [node name="EastWall" type="CSGBox" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.875, 3, 0 )
@@ -395,9 +443,18 @@ width = 0.25
 height = 6.0
 depth = 16.0
 
+[node name="CSGCombiner" type="CSGCombiner" parent="Bedroom/Bedroom/EastWall"]
+operation = 2
+
+[node name="WindowHole" type="CSGBox" parent="Bedroom/Bedroom/EastWall/CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -3 )
+width = 4.0
+height = 3.0
+depth = 4.0
+
 [node name="EastWallCollision" type="CollisionShape" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.875, 3, 0 )
-shape = SubResource( 28 )
+shape = SubResource( 24 )
 
 [node name="WestWall" type="CSGBox" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.875, 3, 0 )
@@ -416,57 +473,61 @@ depth = 2.5
 
 [node name="WestWallCollision" type="CollisionShape" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.875, 5.5, 0 )
-shape = SubResource( 31 )
+shape = SubResource( 25 )
 
 [node name="WestWallCollision2" type="CollisionShape" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.875, 2.5, 6.625 )
-shape = SubResource( 30 )
+shape = SubResource( 26 )
 
 [node name="WestWallCollision3" type="CollisionShape" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.875, 2.5, -2.625 )
-shape = SubResource( 29 )
+shape = SubResource( 27 )
 
 [node name="Cupboard" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 7 )
 
 [node name="Cupboard" type="StaticBody" parent="Cupboard"]
 collision_layer = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="Floor" type="MeshInstance" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-mesh = SubResource( 32 )
+mesh = SubResource( 28 )
 material/0 = null
 
 [node name="FloorCollision" type="CollisionShape" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-shape = SubResource( 33 )
+shape = SubResource( 29 )
 
 [node name="NorthWall" type="MeshInstance" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -3.875 )
-mesh = SubResource( 34 )
+mesh = SubResource( 30 )
 material/0 = null
 
 [node name="NorthWallCollision" type="CollisionShape" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -3.875 )
-shape = SubResource( 35 )
+shape = SubResource( 31 )
 
 [node name="SouthWall" type="MeshInstance" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 3.875 )
-mesh = SubResource( 34 )
+mesh = SubResource( 30 )
 material/0 = null
 
 [node name="SouthWallCollision" type="CollisionShape" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 3.875 )
-shape = SubResource( 35 )
+shape = SubResource( 31 )
 
 [node name="EastWall" type="MeshInstance" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.875, 3, 0 )
-mesh = SubResource( 36 )
+mesh = SubResource( 32 )
 material/0 = null
 
 [node name="EastWallCollision" type="CollisionShape" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.875, 3, 0 )
-shape = SubResource( 37 )
+shape = SubResource( 33 )
 
 [node name="WestWall" type="CSGBox" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.875, 3, 0 )
@@ -485,7 +546,7 @@ depth = 2.5
 
 [node name="WestWallCollision" type="CollisionShape" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.875, 5.5, 0 )
-shape = SubResource( 38 )
+shape = SubResource( 34 )
 
 [node name="WestWallCollision2" type="CollisionShape" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.875, 2.5, 2.625 )

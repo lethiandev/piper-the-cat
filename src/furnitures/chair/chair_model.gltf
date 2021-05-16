@@ -15,12 +15,17 @@
     "nodes" : [
         {
             "mesh" : 0,
-            "name" : "Table"
+            "name" : "Chair",
+            "translation" : [
+                2.1999998092651367,
+                0,
+                0.800000011920929
+            ]
         }
     ],
     "meshes" : [
         {
-            "name" : "Table",
+            "name" : "Chair",
             "primitives" : [
                 {
                     "attributes" : {
@@ -37,64 +42,64 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 120,
+            "count" : 256,
             "max" : [
-                1.2000000476837158,
-                1.9000000953674316,
-                2.4000000953674316
+                0.6500000953674316,
+                2.7300002574920654,
+                0.5200000405311584
             ],
             "min" : [
-                -1.2000000476837158,
-                0,
-                -2.4000000953674316
+                -0.6500000953674316,
+                2.3245812030836532e-07,
+                -0.5200000405311584
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 120,
+            "count" : 256,
             "type" : "VEC3"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 120,
+            "count" : 256,
             "type" : "VEC2"
         },
         {
             "bufferView" : 3,
             "componentType" : 5123,
-            "count" : 180,
+            "count" : 384,
             "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 1440,
+            "byteLength" : 3072,
             "byteOffset" : 0
         },
         {
             "buffer" : 0,
-            "byteLength" : 1440,
-            "byteOffset" : 1440
+            "byteLength" : 3072,
+            "byteOffset" : 3072
         },
         {
             "buffer" : 0,
-            "byteLength" : 960,
-            "byteOffset" : 2880
+            "byteLength" : 2048,
+            "byteOffset" : 6144
         },
         {
             "buffer" : 0,
-            "byteLength" : 360,
-            "byteOffset" : 3840
+            "byteLength" : 768,
+            "byteOffset" : 8192
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 4200,
-            "uri" : "table_model.bin"
+            "byteLength" : 8960,
+            "uri" : "chair_model.bin"
         }
     ]
 }

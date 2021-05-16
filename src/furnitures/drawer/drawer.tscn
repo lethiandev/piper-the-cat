@@ -22,27 +22,27 @@ extents = Vector3( 0.90614, 0.667847, 0.052345 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.111576, 0.387515 )
+transform = Transform( 1.32, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0.133891, 0.465018 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.799834, 0.375614 )
+transform = Transform( 1.32, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0.959801, 0.450737 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.567696, 0.375614 )
+transform = Transform( 1.32, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, -0.681235, 0.450737 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.881765, 0.121393, 0.375614 )
+transform = Transform( 1.32, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -1.16393, 0.145672, 0.450737 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape5" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.882, 0.121, 0.376 )
+transform = Transform( 1.32, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 1.16424, 0.1452, 0.4512 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape6" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.121, 0 )
+transform = Transform( 1.32, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0.1452, 0 )
 shape = SubResource( 4 )
 
 [editable path="DrawerModel"]
