@@ -38,9 +38,10 @@ func _clip_camera_collision() -> void:
 		var point = get_collision_point()
 		var relative = global_transform.origin - point
 		var distance = relative.length() - 0.5
-		_clip_camera(max(0.6, distance))
+		_clip_camera(max(0.2, distance))
 	else:
-		_clip_camera(cast_to.length() - 0.5)
+		var distance = cast_to.length() - 0.5
+		_clip_camera(distance)
 
 func _clip_camera(p_distance: float) -> void:
 	var oldz = $Camera.transform.origin.z
