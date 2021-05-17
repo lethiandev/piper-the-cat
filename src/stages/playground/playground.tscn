@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=70 format=2]
 
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player/camera.tscn" type="PackedScene" id=2]
@@ -32,6 +32,8 @@
 [ext_resource path="res://items/watermelon/watermelon.tscn" type="PackedScene" id=30]
 [ext_resource path="res://items/cheese/cheese.tscn" type="PackedScene" id=31]
 [ext_resource path="res://items/bread/bread.tscn" type="PackedScene" id=32]
+[ext_resource path="res://furnitures/bed/bed.tscn" type="PackedScene" id=33]
+[ext_resource path="res://items/ball/ball.tscn" type="PackedScene" id=34]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -150,13 +152,16 @@ extents = Vector3( 0.125, 0.5, 4 )
 [node name="PlaygroundStage" type="Node"]
 script = ExtResource( 7 )
 
-[node name="GameHUD" parent="." instance=ExtResource( 6 )]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 101
+
+[node name="GameHUD" parent="CanvasLayer" instance=ExtResource( 6 )]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="WorldEnvironment"]
-transform = Transform( -0.406621, 0.727293, -0.552905, -0.573717, 0.267706, 0.774069, 0.710991, 0.631964, 0.308405, 0, 4, 0 )
+transform = Transform( -0.0688308, 0.589527, -0.80481, -0.692396, 0.552559, 0.463968, 0.718227, 0.589183, 0.370153, 0, 4, 0 )
 light_energy = 0.25
 shadow_enabled = true
 directional_shadow_split_1 = 0.2
@@ -489,6 +494,45 @@ transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3, 0, 8
 
 [node name="Door" parent="Longue/DoorFrame4" instance=ExtResource( 21 )]
 
+[node name="Chair" parent="Longue" instance=ExtResource( 11 )]
+transform = Transform( -0.0965406, 0, -0.995329, 0, 1, 0, 0.995329, 0, -0.0965406, -1.56615, 0, 5.90903 )
+
+[node name="Chair2" parent="Longue" instance=ExtResource( 11 )]
+transform = Transform( -0.994805, 0, -0.101803, 0, 1, 0, 0.101803, 0, -0.994805, -3.19043, 0, 4.34277 )
+
+[node name="Chair3" parent="Longue" instance=ExtResource( 11 )]
+transform = Transform( -0.985151, 0, 0.171688, 0, 1, 0, -0.171688, 0, -0.985151, -3.90913, 4.76837e-07, 2.26518 )
+
+[node name="Chair4" parent="Longue" instance=ExtResource( 11 )]
+transform = Transform( -0.024274, -0.391827, 0.919719, -0.998087, 0.0618324, 2.70278e-09, -0.0568684, -0.917959, -0.392578, -1.54733, 0.522824, 0.352789 )
+
+[node name="Table" parent="Longue" instance=ExtResource( 8 )]
+transform = Transform( 1.49058, 0, 0, 0, 1, 0, 0, 0, 1.04787, -1.63195, 0, 3.3009 )
+
+[node name="Cabinet" parent="Longue" instance=ExtResource( 23 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1.23297, 0, -5.38947e-08, 5.0469, 0, -0.0992916 )
+
+[node name="Wardrobe2" type="Spatial" parent="Longue"]
+transform = Transform( 1.2, 0, 0, 0, 1.4, 0, 0, 0, 1, 3.69219, 0, -7.7106 )
+
+[node name="Drawer" parent="Longue/Wardrobe2" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 4.37114e-08, 0, 1, 0, -4.37114e-08, 0, 1, -0.000197411, 0.693726, -0.000230789 )
+
+[node name="Drawer2" parent="Longue/Wardrobe2" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 4.37114e-08, 0, 1, 0, -4.37114e-08, 0, 1, -0.000195503, 2.33597, -0.000230789 )
+
+[node name="Shelf" parent="Longue" instance=ExtResource( 26 )]
+transform = Transform( 1.3422, 0, 0, 0, 1, 0, 0, 0, 1, -3.70734, 2.84584, -7.35459 )
+
+[node name="Shelf2" parent="Longue" instance=ExtResource( 26 )]
+transform = Transform( 1.3422, 0, 0, 0, 1, 0, 0, 0, 1, -3.70734, 4.17709, -7.35459 )
+
+[node name="Shelf3" parent="Longue" instance=ExtResource( 26 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1.23297, 0, -5.38947e-08, 5.3753, 4.20637, -0.0992916 )
+
+[node name="Table2" parent="Longue" instance=ExtResource( 8 )]
+transform = Transform( 0.634492, 0, 0, 0, 1, 0, 0, 0, 0.348596, -4.29032, -0.286913, -5.57533 )
+
 [node name="Bedroom" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -5 )
 
@@ -593,6 +637,51 @@ shape = SubResource( 27 )
 [node name="WestWallCollision3" type="CollisionShape" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.875, 2.5, -2.625 )
 shape = SubResource( 28 )
+
+[node name="Table" parent="Bedroom" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -2.48041, 0, -0.304149 )
+
+[node name="Chair" parent="Bedroom" instance=ExtResource( 11 )]
+transform = Transform( 0.949146, 0, -0.314838, 0, 1, 0, 0.314838, 0, 0.949146, -0.730655, 0, 0.679405 )
+
+[node name="Chair3" parent="Bedroom" instance=ExtResource( 11 )]
+transform = Transform( -0.0131246, 0, -0.999914, 0, 1, 0, 0.999914, 0, -0.0131246, -0.24658, 0, 6.60317 )
+
+[node name="Chair2" parent="Bedroom" instance=ExtResource( 11 )]
+transform = Transform( -0.440942, 0, 0.897536, 0, 1, 0, -0.897536, 0, -0.440942, -1.18227, -4.76837e-07, -6.41224 )
+
+[node name="Bed" parent="Bedroom" instance=ExtResource( 33 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.43685, 0, -5.04539 )
+
+[node name="Wardrobe" type="Spatial" parent="Bedroom"]
+transform = Transform( -5.24537e-08, 0, 1, 0, 1.4, 0, -1.2, 0, -4.37114e-08, -3.731, 0, -5.164 )
+
+[node name="Drawer" parent="Bedroom/Wardrobe" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 4.37114e-08, 0, 1, 0, -4.37114e-08, 0, 1, -0.000197411, 0.693726, -0.000230789 )
+
+[node name="Drawer2" parent="Bedroom/Wardrobe" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 4.37114e-08, 0, 1, 0, -4.37114e-08, 0, 1, -0.000195503, 2.33597, -0.000230789 )
+
+[node name="Cabinet" parent="Bedroom" instance=ExtResource( 23 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.94722, -3.91006e-05, 6.70754 )
+
+[node name="Cabinet2" parent="Bedroom" instance=ExtResource( 23 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.94722, -3.91006e-05, 4.80964 )
+
+[node name="Shelf" parent="Bedroom" instance=ExtResource( 26 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.62975, 4.383, 7.36597 )
+
+[node name="Shelf3" parent="Bedroom" instance=ExtResource( 26 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.3455, 4.383, 5.84226 )
+
+[node name="Shelf4" parent="Bedroom" instance=ExtResource( 26 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.3455, 4.383, 3.60969 )
+
+[node name="Shelf5" parent="Bedroom" instance=ExtResource( 26 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 0.750573, 0, -3.28086e-08, 3.3455, 4.383, 0.25031 )
+
+[node name="Shelf2" parent="Bedroom" instance=ExtResource( 26 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.64593, 4.383, 7.36597 )
 
 [node name="Cupboard" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 7 )
@@ -877,11 +966,356 @@ transform = Transform( -0.766986, 0, 0.641663, 0, 1, 0, -0.641663, 0, -0.766986,
 [node name="CheeseItem4" parent="ItemsBag" instance=ExtResource( 31 )]
 transform = Transform( -0.131858, 0, -0.991268, 0, 1, 0, 0.991268, 0, -0.131858, -8.5055, 2.66983, -7.02517 )
 
+[node name="BookItem7" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -4.1624e-08, -0.952247, 0.30533, 1, -4.37114e-08, 0, 1.33464e-08, 0.30533, 0.952247, 3.13835, 2.00089, -3.63411 )
+
+[node name="BookItem8" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -4.27789e-08, -0.978667, 0.205453, 1, -4.37114e-08, 0, 8.98062e-09, 0.205453, 0.978667, 3.13835, 2.21672, -3.63411 )
+
+[node name="BookItem9" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -4.13222e-08, -0.945342, 0.32608, 1, -4.37114e-08, 0, 1.42534e-08, 0.32608, 0.945342, 3.13835, 2.45215, -3.63411 )
+
+[node name="BookItem10" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.0827733, 0, -0.996568, 0, 1, 0, 0.996568, 0, -0.0827733, 2.93839, 2.31225, -6.42164 )
+
+[node name="BookItem11" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.162258, 0, -0.986748, 0, 1, 0, 0.986748, 0, -0.162258, 2.93839, 2.31225, -6.69803 )
+
+[node name="BookItem12" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 0.20236, 0, 0.979311, 0, 1, 0, -0.979311, 0, 0.20236, 2.93839, 2.31225, -6.99574 )
+
+[node name="BookItem13" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.16088, 0, -0.986974, 0, 1, 0, 0.986974, 0, -0.16088, 2.93839, 2.31225, -7.23383 )
+
+[node name="BookItem14" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 0.0593936, 0, -0.998235, 0, 1, 0, 0.998235, 0, 0.0593936, 2.7738, 3.97079, -11.2625 )
+
+[node name="BookItem15" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 0.0693909, 0, -0.99759, 0, 1, 0, 0.99759, 0, 0.0693909, 2.73848, 3.97079, -11.0261 )
+
+[node name="BookItem16" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.133571, 0, 0.991039, 0, 1, 0, -0.991039, 0, -0.133571, 2.77728, 3.97079, -10.7467 )
+
+[node name="BookItem17" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 0.150467, 0, -0.988615, 0, 1, 0, 0.988615, 0, 0.150467, 2.73848, 3.97079, -10.475 )
+
+[node name="BookItem18" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.102289, 0, 0.994755, 0, 1, 0, -0.994755, 0, -0.102289, 2.78193, 3.97079, -10.1848 )
+
+[node name="BookItem19" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -1.64156e-08, 0.375545, -0.926804, -1, -4.37114e-08, 0, -4.05119e-08, 0.926804, 0.375545, 2.84615, 3.60474, -9.36669 )
+
+[node name="BookItem20" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.0437415, 0, -0.999043, 0, 1, 0, 0.999043, 0, -0.0437415, 2.84615, 2.82495, -9.06018 )
+
+[node name="BookItem21" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 0.101369, 0, -0.994849, 0, 1, 0, 0.994849, 0, 0.101369, 2.80084, 2.82495, -9.36766 )
+
+[node name="BookItem22" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 0.0396609, 0, 0.999213, 0, 1, 0, -0.999213, 0, 0.0396609, 2.80084, 2.82495, -9.71063 )
+
+[node name="BookItem23" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -1.26712e-08, -0.289884, 0.957062, 1, -4.37114e-08, 0, 4.18345e-08, 0.957062, 0.289884, 2.9062, 0.243658, -9.44257 )
+
+[node name="BookItem24" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 1.34764e-08, 0.308303, 0.951288, 1, -4.37114e-08, 0, 4.15821e-08, 0.951288, -0.308303, 7.87707, 1.34207, -10.5708 )
+
+[node name="PlateItem13" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.96228, 1.95433, -6.85186 )
+
+[node name="CheeseItem5" parent="ItemsBag" instance=ExtResource( 31 )]
+transform = Transform( 0.650217, 0, -0.759748, 0, 1, 0, 0.759748, 0, 0.650217, 4.03582, 2.21111, -6.79462 )
+
+[node name="MugItem9" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( -0.79246, 0, 0.609924, 0, 1, 0, -0.609924, 0, -0.79246, 3.76731, 2.10147, -5.92149 )
+
+[node name="MugItem10" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( -0.435467, 0, 0.900205, 0, 1, 0, -0.900205, 0, -0.435467, 2.87739, 2.54049, -11.1329 )
+
+[node name="WazeItem2" parent="ItemsBag" instance=ExtResource( 29 )]
+transform = Transform( -0.79246, 0, 0.609924, 0, 1, 0, -0.609924, 0, -0.79246, 2.8446, 2.28052, -4.56304 )
+
+[node name="WazeItem3" parent="ItemsBag" instance=ExtResource( 29 )]
+transform = Transform( -0.79246, 0, 0.609924, 0, 1, 0, -0.609924, 0, -0.79246, 2.73966, 5.04212, -11.1562 )
+
+[node name="WazeItem4" parent="ItemsBag" instance=ExtResource( 29 )]
+transform = Transform( -0.79246, 0, 0.609924, 0, 1, 0, -0.609924, 0, -0.79246, 2.65588, 1.57631, -9.14938 )
+
+[node name="JarItem18" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( -0.434634, 0, -0.900607, 0, 1, 0, 0.900607, 0, -0.434634, 2.76631, 1.46715, -11.0775 )
+
+[node name="JarItem19" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( -0.146885, 0.697511, -0.701358, -0.981913, -0.0171868, 0.188549, 0.119461, 0.716368, 0.68742, 2.68981, 0.314065, -11.0775 )
+
+[node name="JarItem20" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( 0.400333, 0, 0.91637, 0, 1, 0, -0.91637, 0, 0.400333, 9.31761, 4.68052, -5.27604 )
+
+[node name="WazeItem5" parent="ItemsBag" instance=ExtResource( 29 )]
+transform = Transform( -0.667495, 0, 0.744614, 0, 1, 0, -0.744614, 0, -0.667495, 9.47106, 4.85008, -4.7737 )
+
+[node name="WazeItem6" parent="ItemsBag" instance=ExtResource( 29 )]
+transform = Transform( -0.667495, 0, 0.744614, 0, 1, 0, -0.744614, 0, -0.667495, 9.1814, 4.85008, -4.32133 )
+
+[node name="WazeItem7" parent="ItemsBag" instance=ExtResource( 29 )]
+transform = Transform( -0.667495, 0, 0.744614, 0, 1, 0, -0.744614, 0, -0.667495, 2.70991, 4.85008, 2.39529 )
+
+[node name="BookItem25" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -1.40079e-08, -0.320464, -0.947261, 1, -4.37114e-08, 0, -4.14061e-08, -0.947261, 0.320464, 9.18636, 4.55668, -1.75077 )
+
+[node name="BookItem26" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 0.00516623, 0, 0.999987, 0, 1, 0, -0.999987, 0, 0.00516623, 9.30546, 4.8825, -0.643145 )
+
+[node name="BookItem27" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.0341843, 0, 0.999415, 0, 1, 0, -0.999415, 0, -0.0341843, 9.30546, 4.8825, -0.369597 )
+
+[node name="BookItem28" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.0341843, 0, 0.999415, 0, 1, 0, -0.999415, 0, -0.0341843, 9.30546, 4.8825, -0.0922919 )
+
+[node name="BookItem29" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.130647, 0, -0.991429, 0, 1, 0, 0.991429, 0, -0.130647, 9.30546, 4.8825, 0.225986 )
+
+[node name="BookItem30" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 0.0259327, 0, 0.999664, 0, 1, 0, -0.999664, 0, 0.0259327, 9.27411, 4.8825, 0.555131 )
+
+[node name="BookItem31" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -4.35293e-08, -0.995835, 0.0911714, 1, -4.37114e-08, 0, 3.98523e-09, 0.0911714, 0.995835, 8.72588, 1.1508, -0.624009 )
+
+[node name="BookItem32" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 4.36863e-08, 0.999425, -0.0339054, 1, -4.37114e-08, 0, -1.48205e-09, -0.0339054, -0.999425, 8.72588, 1.42641, -0.624009 )
+
+[node name="BookItem60" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -2.55699e-08, -0.584972, 0.811054, 1, -4.37114e-08, 0, 3.54523e-08, 0.811054, 0.584972, 8.68162, 1.16978, 1.98315 )
+
+[node name="MugItem27" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( 0.156348, 0, -0.987702, 0, 1, 0, 0.987702, 0, 0.156348, 9.2072, 2.05963, 2.32079 )
+
+[node name="MugItem28" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( 0.726814, 0, -0.686834, 0, 1, 0, 0.686834, 0, 0.726815, 9.42782, 2.05963, 1.95417 )
+
+[node name="PlateItem21" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.72714, 1.96141, 0.756959 )
+
+[node name="BookItem61" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.164066, 0, 0.986449, 0, 1, 0, -0.986449, 0, -0.164066, 9.01055, 2.29092, -0.859617 )
+
+[node name="BookItem62" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.0280961, 0, 0.999605, 0, 1, 0, -0.999605, 0, -0.0280961, 8.97931, 2.29092, -0.547574 )
+
+[node name="BookItem63" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.125922, 0, 0.99204, 0, 1, 0, -0.99204, 0, -0.125922, 8.93928, 2.28724, -0.144684 )
+
+[node name="BallItem" parent="ItemsBag" instance=ExtResource( 34 )]
+transform = Transform( -0.313656, 0.000563368, -0.949537, -0.947901, -0.0588564, 0.313081, -0.0557099, 0.998266, 0.0189947, 5.9186, 0.550178, -11.8851 )
+
+[node name="BallItem2" parent="ItemsBag" instance=ExtResource( 34 )]
+transform = Transform( -0.313656, 0.000563368, -0.949537, -0.593697, 0.780308, 0.196576, 0.741042, 0.625395, -0.244414, 9.14041, 0.573874, -1.85797 )
+
+[node name="MugItem11" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( -0.962398, 0, -0.271642, 0, 1, 0, 0.271642, 0, -0.962398, 4.06654, 4.60276, 2.50739 )
+
+[node name="MugItem12" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( -0.532935, 0, -0.846156, 0, 1, 0, 0.846156, 0, -0.532935, 3.6852, 4.60276, 2.25884 )
+
+[node name="MugItem13" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( 0.756938, 0, 0.653487, 0, 1, 0, -0.653487, 0, 0.756938, 9.21047, 4.61573, 2.44326 )
+
+[node name="PlateItem14" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( 0.756938, 0, 0.653487, 0, 1, 0, -0.653487, 0, 0.756938, 9.11798, 4.53142, 1.5024 )
+
+[node name="PlateItem15" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.33476, 1.98156, 8.07165 )
+
+[node name="PlateItem16" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( 0.197828, 0, -0.980237, 0, 1, 0, 0.980237, 0, 0.197828, -6.71091, 1.98156, 7.41635 )
+
+[node name="PlateItem17" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( 0.538609, 0, 0.842556, 0, 1, 0, -0.842556, 0, 0.538609, -6.64405, 1.98156, 5.61853 )
+
+[node name="PlateItem18" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( 0.0262293, 0, -0.999656, 0, 1, 0, 0.999656, 0, 0.0262293, -5.42167, 1.98156, 4.44299 )
+
+[node name="PlateItem22" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( 0.0262293, 0, -0.999656, 0, 1, 0, 0.999656, 0, 0.0262293, -4.8483, 1.98156, 6.68966 )
+
+[node name="PlateItem23" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( -0.359199, 0, -0.933261, 0, 1, 0, 0.933261, 0, -0.359199, -4.8483, 2.12293, 6.68966 )
+
+[node name="PlateItem24" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( 0.853424, 0, 0.521218, 0, 1, 0, -0.521218, 0, 0.853424, -4.8483, 2.28365, 6.68966 )
+
+[node name="PlateItem20" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( 0.0262293, 0, -0.999656, 0, 1, 0, 0.999656, 0, 0.0262293, 0.786132, 1.95105, 2.25084 )
+
+[node name="PlateItem19" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( 0.602136, 0, -0.798394, 0, 1, 0, 0.798394, 0, 0.602136, -5.04553, 1.98156, 5.73214 )
+
+[node name="MugItem14" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( -0.821776, 0, 0.56981, 0, 1, 0, -0.56981, 0, -0.821776, -6.11783, 2.06139, 4.66954 )
+
+[node name="MugItem15" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( -0.851361, 0, -0.52458, 0, 1, 0, 0.52458, 0, -0.851361, -6.5234, 2.06139, 6.21828 )
+
+[node name="MugItem16" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( -0.510663, 0, -0.859781, 0, 1, 0, 0.859781, 0, -0.510663, -6.9535, 2.06139, 8.20333 )
+
+[node name="MugItem17" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( 0.99007, 0, -0.140573, 0, 1, 0, 0.140573, 0, 0.99007, -4.65364, 2.06139, 8.24038 )
+
+[node name="WazeItem8" parent="ItemsBag" instance=ExtResource( 29 )]
+transform = Transform( 0.99007, 0, -0.140573, 0, 1, 0, 0.140573, 0, 0.99007, -5.54307, 2.25997, 6.50752 )
+
+[node name="WazeItem9" parent="ItemsBag" instance=ExtResource( 29 )]
+transform = Transform( 0.99007, 0, -0.140573, 0, 1, 0, 0.140573, 0, 0.99007, 1.27574, 2.25997, 3.64575 )
+
+[node name="WazeItem15" parent="ItemsBag" instance=ExtResource( 29 )]
+transform = Transform( 0.665686, 0, 0.746232, 0, 1, 0, -0.746232, 0, 0.665686, 1.48115, 4.66465, 1.86601 )
+
+[node name="BookItem64" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.0781981, 0, 0.996938, 0, 1, 0, -0.996938, 0, -0.0781981, 1.48115, 4.66465, 3.94254 )
+
+[node name="BookItem65" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 0.169401, 0, 0.985547, 0, 1, 0, -0.985547, 0, 0.169401, 1.39717, 4.66465, 3.59317 )
+
+[node name="BookItem66" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 0.0366262, 0, 0.999329, 0, 1, 0, -0.999329, 0, 0.0366262, 1.40951, 4.66465, 3.18585 )
+
+[node name="BookItem67" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 0.122129, 0, -0.992514, 0, 1, 0, 0.992514, 0, 0.122129, 1.39868, 4.66465, 2.79558 )
+
+[node name="CheeseItem6" parent="ItemsBag" instance=ExtResource( 31 )]
+transform = Transform( 0.602136, 0, -0.798394, 0, 1, 0, 0.798394, 0, 0.602136, -4.97628, 2.25092, 5.80619 )
+
+[node name="BallItem3" parent="ItemsBag" instance=ExtResource( 34 )]
+transform = Transform( 0.699571, -0.442411, -0.561135, 0.672765, 0.672433, 0.30858, 0.240806, -0.593386, 0.768053, 1.00163, 0.538731, 4.85834 )
+
+[node name="BookItem34" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -2.76009e-08, -0.631434, 0.77543, 1, -4.37114e-08, 0, 3.38951e-08, 0.77543, 0.631434, 0.910061, 0.195619, 3.36306 )
+
+[node name="BookItem45" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -4.07457e-08, 0.932153, -0.362064, -1, -4.37114e-08, 0, -1.58263e-08, 0.362064, 0.932153, 0.946554, 1.11786, 2.28247 )
+
+[node name="BookItem35" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 0.987887, 0, -0.155176, 0, 1, 0, 0.155176, 0, 0.987887, -8.88171, 3.33274, -4.38646 )
+
+[node name="BookItem36" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.999462, 0, 0.0327889, 0, 1, 0, -0.0327889, 0, -0.999462, -8.54181, 3.33274, -4.38646 )
+
+[node name="BookItem37" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.990093, 0, 0.140417, 0, 1, 0, -0.140417, 0, -0.990093, -8.23293, 3.33274, -4.38646 )
+
+[node name="BookItem38" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.999209, 0, 0.0397656, 0, 1, 0, -0.0397656, 0, -0.999209, -7.91132, 3.33274, -4.38646 )
+
+[node name="BookItem39" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.982228, 0, 0.18769, 0, 1, 0, -0.18769, 0, -0.982228, -7.46663, 3.33274, -4.38646 )
+
+[node name="BookItem40" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.994256, 0, -0.107028, 0, 1, 0, 0.107028, 0, -0.994256, -8.94524, 4.64666, -4.37791 )
+
+[node name="BookItem41" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.999209, 0, 0.039783, 0, 1, 0, -0.039783, 0, -0.999209, -8.60626, 4.64666, -4.33228 )
+
+[node name="BookItem42" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.999209, 0, 0.039783, 0, 1, 0, -0.039783, 0, -0.999209, -8.28844, 4.64666, -4.40784 )
+
+[node name="BookItem43" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.982467, 0, 0.186438, 0, 1, 0, -0.186438, 0, -0.982467, -7.95132, 4.64666, -4.33261 )
+
+[node name="BookItem44" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 1.17518e-08, 0.985482, 0.16978, -1, 1.19249e-08, 0, -2.0246e-09, -0.16978, 0.985482, -7.17024, 4.34626, -4.24975 )
+
+[node name="WazeItem10" parent="ItemsBag" instance=ExtResource( 29 )]
+transform = Transform( -0.982228, 0, 0.18769, 0, 1, 0, -0.18769, 0, -0.982228, -6.72048, 3.31151, -4.42319 )
+
+[node name="WazeItem11" parent="ItemsBag" instance=ExtResource( 29 )]
+transform = Transform( -0.85306, 0, -0.521814, 0, 1, 0, 0.521814, 0, -0.85306, -8.28593, 2.05316, -2.54296 )
+
+[node name="WazeItem12" parent="ItemsBag" instance=ExtResource( 29 )]
+transform = Transform( -0.85306, 0, -0.521814, 0, 1, 0, 0.521814, 0, -0.85306, 0.575866, 5.0631, -4.32625 )
+
+[node name="WazeItem13" parent="ItemsBag" instance=ExtResource( 29 )]
+transform = Transform( -0.85306, 0, -0.521814, 0, 1, 0, 0.521814, 0, -0.85306, -0.175798, 5.0631, -4.08492 )
+
+[node name="WazeItem14" parent="ItemsBag" instance=ExtResource( 29 )]
+transform = Transform( -0.85306, 0, -0.521814, 0, 1, 0, 0.521814, 0, -0.85306, -9.3019, 5.03198, -7.20912 )
+
+[node name="MugItem18" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( 0.900296, 0, 0.435278, 0, 1, 0, -0.435278, 0, 0.900296, -6.4356, 4.40642, -4.34538 )
+
+[node name="MugItem19" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( -0.362226, 0, -0.93209, 0, 1, 0, 0.93209, 0, -0.362226, 1.20343, 1.17065, 3.57407 )
+
+[node name="MugItem20" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( 0.692559, 0, 0.721362, 0, 1, 0, -0.721362, 0, 0.692559, 0.695377, 1.17065, 3.61375 )
+
+[node name="MugItem21" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( 0.961799, 0, 0.273758, 0, 1, 0, -0.273758, 0, 0.961799, 1.16313, 1.17065, 3.2138 )
+
+[node name="MugItem22" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( 0.628561, 0, 0.777761, 0, 1, 0, -0.777761, 0, 0.628561, 0.636891, 1.17065, 2.95673 )
+
+[node name="MugItem23" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( -0.784452, 0, 0.62019, 0, 1, 0, -0.62019, 0, -0.784452, 0.636891, 1.37931, -4.2989 )
+
+[node name="MugItem24" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( 0.480622, 0, 0.876928, 0, 1, 0, -0.876928, 0, 0.480622, 0.214643, 1.37931, -4.05995 )
+
+[node name="MugItem26" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( 0.943078, 0, 0.332573, 0, 1, 0, -0.332573, 0, 0.943078, 0.662187, 3.66877, -4.07337 )
+
+[node name="MugItem25" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( -0.975435, 0, 0.220289, 0, 1, 0, -0.220289, 0, -0.975435, -0.0857806, 1.37931, -4.32559 )
+
+[node name="BookItem33" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.994566, 0, 0.104112, 0, 1, 0, -0.104112, 0, -0.994566, -1.42865, 1.61893, -4.32559 )
+
+[node name="BookItem46" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.998838, 0, -0.0482048, 0, 1, 0, 0.0482048, 0, -0.998838, -1.12072, 1.61893, -4.32559 )
+
+[node name="BookItem47" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.996623, 0, 0.0821125, 0, 1, 0, -0.0821125, 0, -0.996623, -0.73132, 1.61893, -4.32559 )
+
+[node name="BookItem53" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.999965, 0, -0.00841239, 0, 1, 0, 0.00841239, 0, -0.999965, 0.858674, 2.78512, -4.18866 )
+
+[node name="BookItem54" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.999435, 0, 0.0336087, 0, 1, 0, -0.0336087, 0, -0.999435, 0.550445, 2.78512, -4.18866 )
+
+[node name="BookItem55" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.999776, 0, -0.0211693, 0, 1, 0, 0.0211693, 0, -0.999776, 0.207679, 2.78512, -4.25452 )
+
+[node name="BookItem56" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.999487, 0, 0.0320213, 0, 1, 0, -0.0320213, 0, -0.999487, -0.138033, 2.78512, -4.25452 )
+
+[node name="BookItem57" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 0.785835, 0, -0.618436, 0, 1, 0, 0.618436, 0, 0.785835, -1.30544, 2.78512, -4.28984 )
+
+[node name="BookItem58" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 3.6088e-08, 0.825596, -0.564261, 1, -4.37114e-08, 0, -2.46646e-08, -0.564261, -0.825596, -1.08154, 3.62269, -4.12033 )
+
+[node name="BookItem59" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -4.22612e-08, -0.966823, 0.255446, 1, -4.37114e-08, 0, 1.11659e-08, 0.255446, 0.966824, -1.08154, 3.91147, -4.15369 )
+
+[node name="BookItem48" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.990159, 0, -0.139951, 0, 1, 0, 0.139951, 0, -0.990159, -1.41869, 0.41319, -4.20856 )
+
+[node name="BookItem49" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.999401, 0, 0.0346204, 0, 1, 0, -0.0346204, 0, -0.999401, -1.08115, 0.41319, -4.22844 )
+
+[node name="BookItem50" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.995536, 0, -0.0943864, 0, 1, 0, 0.0943864, 0, -0.995536, -0.740373, 0.41319, -4.20682 )
+
+[node name="BookItem51" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.999875, 0, 0.0157946, 0, 1, 0, -0.0157946, 0, -0.999875, -0.421284, 0.41319, -4.20682 )
+
+[node name="BookItem52" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 1.156e-08, 0.264462, -0.964396, 1, -4.37114e-08, 0, -4.21551e-08, -0.964396, -0.264462, 0.574961, 0.183257, -4.15295 )
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.04552, 1.07807, -6.66997 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.185848, 0.388788, 4.61994 )
 
 [node name="CameraBoom" parent="Player" instance=ExtResource( 2 )]
-transform = Transform( -0.377421, -0.654811, 0.654811, 0, 0.707107, 0.707107, -0.926042, 0.266877, -0.266877, 0, 0, 0 )
+transform = Transform( 0.521055, 0.603533, -0.603533, 0, 0.707107, 0.707107, 0.853524, -0.368441, 0.368441, -4.76837e-07, 0, 0 )
 
 [connection signal="ready" from="Kitchen/Kitchen/Ceiling" to="Kitchen/Kitchen/Ceiling" method="set_visible" binds= [ true ]]
 [connection signal="ready" from="Longue/Longue/Ceiling" to="Longue/Longue/Ceiling" method="set_visible" binds= [ true ]]
