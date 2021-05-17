@@ -32,6 +32,7 @@ tracks/0/keys = {
 [sub_resource type="StyleBoxEmpty" id=2]
 
 [node name="MenuStage" type="Node"]
+pause_mode = 2
 script = ExtResource( 6 )
 
 [node name="Camera" type="Camera" parent="."]
