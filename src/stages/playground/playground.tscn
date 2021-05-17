@@ -1317,7 +1317,7 @@ transform = Transform( -0.999875, 0, 0.0157946, 0, 1, 0, -0.0157946, 0, -0.99987
 transform = Transform( 1.156e-08, 0.264462, -0.964396, 1, -4.37114e-08, 0, -4.21551e-08, -0.964396, -0.264462, 0.574961, 0.183257, -4.15295 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.185848, 0.388788, 4.61994 )
+transform = Transform( -0.860244, 0, -0.509882, 0, 1, 0, 0.509882, 0, -0.860244, -5.98837, 0.388788, -8.58395 )
 
 [node name="CameraBoom" parent="Player" instance=ExtResource( 2 )]
 transform = Transform( 0.521055, 0.603533, -0.603533, 0, 0.707107, 0.707107, 0.853524, -0.368441, 0.368441, -4.76837e-07, 0, 0 )
