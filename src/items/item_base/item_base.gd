@@ -12,7 +12,7 @@ func _ready() -> void:
 
 func _integrate_forces(p_state: PhysicsDirectBodyState) -> void:
 	var origin = p_state.transform.origin
-	if start_position.distance_squared_to(origin) > 0.1:
+	if start_position.distance_squared_to(origin) > 0.01:
 		_handle_item_moved()
 
 func _handle_item_moved() -> void:

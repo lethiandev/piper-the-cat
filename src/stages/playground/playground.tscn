@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player/camera.tscn" type="PackedScene" id=2]
@@ -19,6 +19,19 @@
 [ext_resource path="res://materials/concrete.material.tres" type="Material" id=17]
 [ext_resource path="res://materials/carpet_b.material.tres" type="Material" id=18]
 [ext_resource path="res://materials/wallpaper_c.material.tres" type="Material" id=19]
+[ext_resource path="res://furnitures/door/frame.tscn" type="PackedScene" id=20]
+[ext_resource path="res://furnitures/door/door.tscn" type="PackedScene" id=21]
+[ext_resource path="res://furnitures/sign/sign.tscn" type="PackedScene" id=22]
+[ext_resource path="res://furnitures/cabinet/cabinet.tscn" type="PackedScene" id=23]
+[ext_resource path="res://furnitures/cooker/cooker.tscn" type="PackedScene" id=24]
+[ext_resource path="res://furnitures/cabinet/cabinet_sink.tscn" type="PackedScene" id=25]
+[ext_resource path="res://furnitures/shelf/shelf.tscn" type="PackedScene" id=26]
+[ext_resource path="res://items/can/can.tscn" type="PackedScene" id=27]
+[ext_resource path="res://items/jar/jar.tscn" type="PackedScene" id=28]
+[ext_resource path="res://items/waze/waze.tscn" type="PackedScene" id=29]
+[ext_resource path="res://items/watermelon/watermelon.tscn" type="PackedScene" id=30]
+[ext_resource path="res://items/cheese/cheese.tscn" type="PackedScene" id=31]
+[ext_resource path="res://items/bread/bread.tscn" type="PackedScene" id=32]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -30,105 +43,108 @@ ambient_light_energy = 1.2
 ambient_light_sky_contribution = 0.8
 
 [sub_resource type="CubeMesh" id=3]
-material = ExtResource( 13 )
 size = Vector3( 12, 2, 8 )
 
 [sub_resource type="ConvexPolygonShape" id=4]
 points = PoolVector3Array( -6, 1, 4, 6, 1, -4, 6, 1, 4, -6, 1, -4, -6, -1, 4, 6, -1, -4, 6, -1, 4, -6, -1, -4, 6, 1, 4, -6, 1, -4, 6, 1, -4, -6, 1, 4, 6, -1, 4, -6, -1, -4, 6, -1, -4, -6, -1, 4, 6, 1, 4, -6, -1, 4, -6, 1, 4, 6, -1, 4, 6, 1, -4, -6, -1, -4, -6, 1, -4, 6, -1, -4 )
 
-[sub_resource type="BoxShape" id=5]
+[sub_resource type="CubeMesh" id=5]
+material = ExtResource( 13 )
+size = Vector3( 12, 2, 8 )
+
+[sub_resource type="BoxShape" id=6]
 extents = Vector3( 6, 3, 0.125 )
 
-[sub_resource type="CubeMesh" id=6]
+[sub_resource type="CubeMesh" id=7]
 material = ExtResource( 14 )
 size = Vector3( 0.25, 6, 8 )
-
-[sub_resource type="BoxShape" id=7]
-extents = Vector3( 0.125, 3, 4 )
 
 [sub_resource type="BoxShape" id=8]
 extents = Vector3( 0.125, 3, 4 )
 
 [sub_resource type="BoxShape" id=9]
-extents = Vector3( 6, 0.75, 0.125 )
+extents = Vector3( 0.125, 3, 4 )
 
 [sub_resource type="BoxShape" id=10]
+extents = Vector3( 6, 0.75, 0.125 )
+
+[sub_resource type="BoxShape" id=11]
 extents = Vector3( 2.375, 2.25, 0.125 )
 
-[sub_resource type="CubeMesh" id=11]
+[sub_resource type="CubeMesh" id=12]
 size = Vector3( 12, 2, 16 )
 
-[sub_resource type="ConvexPolygonShape" id=12]
+[sub_resource type="ConvexPolygonShape" id=13]
 points = PoolVector3Array( -6, 1, 8, 6, 1, -8, 6, 1, 8, -6, 1, -8, -6, -1, 8, 6, -1, -8, 6, -1, 8, -6, -1, -8, 6, 1, 8, -6, 1, -8, 6, 1, -8, -6, 1, 8, 6, -1, 8, -6, -1, -8, 6, -1, -8, -6, -1, 8, 6, 1, 8, -6, -1, 8, -6, 1, 8, 6, -1, 8, 6, 1, -8, -6, -1, -8, -6, 1, -8, 6, -1, -8 )
 
-[sub_resource type="BoxShape" id=13]
+[sub_resource type="BoxShape" id=14]
 extents = Vector3( 6, 0.5, 0.125 )
 
-[sub_resource type="BoxShape" id=14]
+[sub_resource type="BoxShape" id=15]
 extents = Vector3( 2.375, 2.5, 0.125 )
 
-[sub_resource type="BoxShape" id=15]
+[sub_resource type="BoxShape" id=16]
 extents = Vector3( 6, 3, 0.125 )
 
-[sub_resource type="BoxShape" id=16]
+[sub_resource type="BoxShape" id=17]
 extents = Vector3( 0.125, 3, 8 )
 
-[sub_resource type="BoxShape" id=17]
+[sub_resource type="BoxShape" id=18]
 extents = Vector3( 0.125, 0.5, 8 )
 
-[sub_resource type="BoxShape" id=18]
+[sub_resource type="BoxShape" id=19]
 extents = Vector3( 0.125, 2.5, 2.75 )
 
-[sub_resource type="BoxShape" id=19]
+[sub_resource type="BoxShape" id=20]
 extents = Vector3( 0.125, 2.5, 1.375 )
 
-[sub_resource type="CubeMesh" id=20]
+[sub_resource type="CubeMesh" id=21]
 material = ExtResource( 18 )
 size = Vector3( 8, 2, 16 )
 
-[sub_resource type="ConvexPolygonShape" id=21]
+[sub_resource type="ConvexPolygonShape" id=22]
 points = PoolVector3Array( -4, 1, 8, 4, 1, -8, 4, 1, 8, -4, 1, -8, -4, -1, 8, 4, -1, -8, 4, -1, 8, -4, -1, -8, 4, 1, 8, -4, 1, -8, 4, 1, -8, -4, 1, 8, 4, -1, 8, -4, -1, -8, 4, -1, -8, -4, -1, 8, 4, 1, 8, -4, -1, 8, -4, 1, 8, 4, -1, 8, 4, 1, -8, -4, -1, -8, -4, 1, -8, 4, -1, -8 )
-
-[sub_resource type="BoxShape" id=22]
-extents = Vector3( 4, 3, 0.125 )
 
 [sub_resource type="BoxShape" id=23]
 extents = Vector3( 4, 3, 0.125 )
 
 [sub_resource type="BoxShape" id=24]
-extents = Vector3( 0.125, 3, 8 )
+extents = Vector3( 4, 3, 0.125 )
 
 [sub_resource type="BoxShape" id=25]
-extents = Vector3( 0.125, 0.5, 8 )
+extents = Vector3( 0.125, 3, 8 )
 
 [sub_resource type="BoxShape" id=26]
-extents = Vector3( 0.125, 2.5, 1.375 )
+extents = Vector3( 0.125, 0.5, 8 )
 
 [sub_resource type="BoxShape" id=27]
+extents = Vector3( 0.125, 2.5, 1.375 )
+
+[sub_resource type="BoxShape" id=28]
 extents = Vector3( 0.125, 2.5, 5.375 )
 
-[sub_resource type="CubeMesh" id=28]
+[sub_resource type="CubeMesh" id=29]
 material = ExtResource( 13 )
 size = Vector3( 8, 2, 8 )
 
-[sub_resource type="BoxShape" id=29]
+[sub_resource type="BoxShape" id=30]
 extents = Vector3( 4, 1, 4 )
 
-[sub_resource type="CubeMesh" id=30]
+[sub_resource type="CubeMesh" id=31]
 material = ExtResource( 17 )
 size = Vector3( 8, 6, 0.25 )
 
-[sub_resource type="BoxShape" id=31]
+[sub_resource type="BoxShape" id=32]
 extents = Vector3( 4, 3, 0.125 )
 
-[sub_resource type="CubeMesh" id=32]
+[sub_resource type="CubeMesh" id=33]
 material = ExtResource( 17 )
 size = Vector3( 0.25, 6, 8 )
 
-[sub_resource type="BoxShape" id=33]
+[sub_resource type="BoxShape" id=34]
 extents = Vector3( 0.125, 3, 4 )
 
-[sub_resource type="BoxShape" id=34]
+[sub_resource type="BoxShape" id=35]
 extents = Vector3( 0.125, 0.5, 4 )
 
 [node name="PlaygroundStage" type="Node"]
@@ -163,9 +179,18 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Ceiling" type="MeshInstance" parent="Kitchen/Kitchen"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0 )
+mesh = SubResource( 3 )
+material/0 = ExtResource( 17 )
+
+[node name="CeilingCollision" type="CollisionShape" parent="Kitchen/Kitchen"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0 )
+shape = SubResource( 4 )
+
 [node name="Floor" type="MeshInstance" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-mesh = SubResource( 3 )
+mesh = SubResource( 5 )
 material/0 = null
 
 [node name="FloorCollision" type="CollisionShape" parent="Kitchen/Kitchen"]
@@ -190,16 +215,16 @@ depth = 4.0
 
 [node name="NorthWallCollision" type="CollisionShape" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -3.875 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="EastWall" type="MeshInstance" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.875, 3, 0 )
-mesh = SubResource( 6 )
+mesh = SubResource( 7 )
 material/0 = null
 
 [node name="EastWallCollision" type="CollisionShape" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.875, 3, 0 )
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="WestWall" type="CSGBox" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.875, 3, 0 )
@@ -217,7 +242,7 @@ height = 3.0
 
 [node name="WestWallCollision" type="CollisionShape" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.875, 3, 0 )
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 
 [node name="SouthWall" type="CSGBox" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 3.875 )
@@ -237,21 +262,21 @@ depth = 2.5
 
 [node name="SouthWallCollision" type="CollisionShape" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.25, 3.875 )
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="SouthWallCollision2" type="CollisionShape" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.625, 2.25, 3.875 )
-shape = SubResource( 10 )
+shape = SubResource( 11 )
 
 [node name="SouthWallCollision3" type="CollisionShape" parent="Kitchen/Kitchen"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.625, 2.25, 3.875 )
-shape = SubResource( 10 )
+shape = SubResource( 11 )
 
 [node name="Drawer" parent="Kitchen" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.80624, 4.05936, -3.71065 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99993, 4.05936, -3.75115 )
 
 [node name="Drawer2" parent="Kitchen" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.12793, 4.05936, -3.71065 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.32162, 4.05936, -3.75115 )
 
 [node name="Table" parent="Kitchen" instance=ExtResource( 8 )]
 transform = Transform( -0.999863, 0, -0.0165451, 0, 1, 0, 0.0165451, 0, -0.999863, 3.02796, 0, 0.143758 )
@@ -271,6 +296,27 @@ transform = Transform( -0.492909, 0, -0.870081, 0, 1, 0, 0.870081, 0, -0.492909,
 [node name="Fridge" parent="Kitchen" instance=ExtResource( 12 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.77445, 0, 2.47426 )
 
+[node name="Cabinet" parent="Kitchen" instance=ExtResource( 23 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.74977, 0, -2.98964 )
+
+[node name="Cabinet2" parent="Kitchen" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.957477, 0, -2.98964 )
+
+[node name="Cabinet3" parent="Kitchen" instance=ExtResource( 23 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -5.02052, 0, -1.86537 )
+
+[node name="CabinetSink" parent="Kitchen" instance=ExtResource( 25 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.02052, 0, 0.024169 )
+
+[node name="Cooker" parent="Kitchen" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.85072, 0, -2.98964 )
+
+[node name="Shelf" parent="Kitchen" instance=ExtResource( 26 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.34274, 3.962, 2.64296 )
+
+[node name="Shelf2" parent="Kitchen" instance=ExtResource( 26 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.34274, 3.962, 0.644484 )
+
 [node name="Longue" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 3 )
 
@@ -281,14 +327,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Ceiling" type="MeshInstance" parent="Longue/Longue"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0 )
+mesh = SubResource( 12 )
+material/0 = ExtResource( 17 )
+
+[node name="CeilingCollision" type="CollisionShape" parent="Longue/Longue"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0 )
+shape = SubResource( 13 )
+
 [node name="Floor" type="MeshInstance" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-mesh = SubResource( 11 )
+mesh = SubResource( 12 )
 material/0 = ExtResource( 15 )
 
 [node name="FloorCollision" type="CollisionShape" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-shape = SubResource( 12 )
+shape = SubResource( 13 )
 
 [node name="NorthWall" type="CSGBox" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -7.875 )
@@ -309,15 +364,15 @@ depth = 2.5
 
 [node name="NorthWallCollision" type="CollisionShape" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5, -7.875 )
-shape = SubResource( 13 )
+shape = SubResource( 14 )
 
 [node name="NorthWallCollision2" type="CollisionShape" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.625, 2.5, -7.875 )
-shape = SubResource( 14 )
+shape = SubResource( 15 )
 
 [node name="NorthWallCollision3" type="CollisionShape" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.625, 2.5, -7.875 )
-shape = SubResource( 14 )
+shape = SubResource( 15 )
 
 [node name="SouthWall" type="CSGBox" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 7.875 )
@@ -344,7 +399,7 @@ depth = 4.0
 
 [node name="SouthWallCollision" type="CollisionShape" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 7.875 )
-shape = SubResource( 15 )
+shape = SubResource( 16 )
 
 [node name="WestWall" type="CSGBox" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.875, 3, 0 )
@@ -374,7 +429,7 @@ height = 3.0
 
 [node name="WestWallCollision" type="CollisionShape" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.875, 3, 0 )
-shape = SubResource( 16 )
+shape = SubResource( 17 )
 
 [node name="EastWall" type="CSGBox" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.875, 3, 0 )
@@ -401,19 +456,38 @@ depth = 2.5
 
 [node name="EastWallCollision" type="CollisionShape" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.875, 5.5, 0 )
-shape = SubResource( 17 )
+shape = SubResource( 18 )
 
 [node name="EastWallCollision2" type="CollisionShape" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.875, 2.5, 0 )
-shape = SubResource( 18 )
+shape = SubResource( 19 )
 
 [node name="EastWallCollision3" type="CollisionShape" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.875, 2.5, 6.625 )
-shape = SubResource( 19 )
+shape = SubResource( 20 )
 
 [node name="EastWallCollision4" type="CollisionShape" parent="Longue/Longue"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.875, 2.5, -6.625 )
-shape = SubResource( 19 )
+shape = SubResource( 20 )
+
+[node name="DoorFrame" parent="Longue" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8 )
+
+[node name="DoorFrame2" parent="Longue" instance=ExtResource( 20 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6, 0, -4 )
+
+[node name="DoorFrame3" parent="Longue" instance=ExtResource( 20 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6, 0, 4 )
+
+[node name="Door" parent="Longue/DoorFrame3" instance=ExtResource( 21 )]
+
+[node name="Sign" parent="Longue/DoorFrame3/Door" instance=ExtResource( 22 )]
+transform = Transform( 0.986335, -0.164755, 5.97339e-10, 0.164755, 0.986335, -7.20167e-09, 5.97339e-10, 7.20167e-09, 1, 0, 3.43793, 0.210795 )
+
+[node name="DoorFrame4" parent="Longue" instance=ExtResource( 20 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3, 0, 8 )
+
+[node name="Door" parent="Longue/DoorFrame4" instance=ExtResource( 21 )]
 
 [node name="Bedroom" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -5 )
@@ -425,14 +499,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Ceiling" type="MeshInstance" parent="Bedroom/Bedroom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0 )
+mesh = SubResource( 21 )
+material/0 = ExtResource( 17 )
+
+[node name="CeilingCollision" type="CollisionShape" parent="Bedroom/Bedroom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0 )
+shape = SubResource( 22 )
+
 [node name="Floor" type="MeshInstance" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-mesh = SubResource( 20 )
+mesh = SubResource( 21 )
 material/0 = null
 
 [node name="FloorCollision" type="CollisionShape" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-shape = SubResource( 21 )
+shape = SubResource( 22 )
 
 [node name="NorthWall" type="CSGBox" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -7.875 )
@@ -450,7 +533,7 @@ height = 3.0
 
 [node name="NorthWallCollision" type="CollisionShape" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -7.875 )
-shape = SubResource( 22 )
+shape = SubResource( 23 )
 
 [node name="SouthWall" type="CSGBox" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 7.875 )
@@ -461,7 +544,7 @@ material = ExtResource( 19 )
 
 [node name="SouthWallCollision" type="CollisionShape" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 7.875 )
-shape = SubResource( 23 )
+shape = SubResource( 24 )
 
 [node name="EastWall" type="CSGBox" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.875, 3, 0 )
@@ -481,7 +564,7 @@ depth = 4.0
 
 [node name="EastWallCollision" type="CollisionShape" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.875, 3, 0 )
-shape = SubResource( 24 )
+shape = SubResource( 25 )
 
 [node name="WestWall" type="CSGBox" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.875, 3, 0 )
@@ -501,15 +584,15 @@ depth = 2.5
 
 [node name="WestWallCollision" type="CollisionShape" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.875, 5.5, 0 )
-shape = SubResource( 25 )
+shape = SubResource( 26 )
 
 [node name="WestWallCollision2" type="CollisionShape" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.875, 2.5, 6.625 )
-shape = SubResource( 26 )
+shape = SubResource( 27 )
 
 [node name="WestWallCollision3" type="CollisionShape" parent="Bedroom/Bedroom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.875, 2.5, -2.625 )
-shape = SubResource( 27 )
+shape = SubResource( 28 )
 
 [node name="Cupboard" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 7 )
@@ -523,39 +606,39 @@ __meta__ = {
 
 [node name="Floor" type="MeshInstance" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-mesh = SubResource( 28 )
+mesh = SubResource( 29 )
 material/0 = null
 
 [node name="FloorCollision" type="CollisionShape" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-shape = SubResource( 29 )
+shape = SubResource( 30 )
 
 [node name="NorthWall" type="MeshInstance" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -3.875 )
-mesh = SubResource( 30 )
+mesh = SubResource( 31 )
 material/0 = null
 
 [node name="NorthWallCollision" type="CollisionShape" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -3.875 )
-shape = SubResource( 31 )
+shape = SubResource( 32 )
 
 [node name="SouthWall" type="MeshInstance" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 3.875 )
-mesh = SubResource( 30 )
+mesh = SubResource( 31 )
 material/0 = null
 
 [node name="SouthWallCollision" type="CollisionShape" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 3.875 )
-shape = SubResource( 31 )
+shape = SubResource( 32 )
 
 [node name="EastWall" type="MeshInstance" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.875, 3, 0 )
-mesh = SubResource( 32 )
+mesh = SubResource( 33 )
 material/0 = null
 
 [node name="EastWallCollision" type="CollisionShape" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.875, 3, 0 )
-shape = SubResource( 33 )
+shape = SubResource( 34 )
 
 [node name="WestWall" type="CSGBox" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.875, 3, 0 )
@@ -575,56 +658,231 @@ depth = 2.5
 
 [node name="WestWallCollision" type="CollisionShape" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.875, 5.5, 0 )
-shape = SubResource( 34 )
+shape = SubResource( 35 )
 
 [node name="WestWallCollision2" type="CollisionShape" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.875, 2.5, 2.625 )
-shape = SubResource( 19 )
+shape = SubResource( 20 )
 
 [node name="WestWallCollision3" type="CollisionShape" parent="Cupboard/Cupboard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.875, 2.5, -2.625 )
-shape = SubResource( 19 )
+shape = SubResource( 20 )
 
 [node name="ItemsBag" parent="." instance=ExtResource( 5 )]
 
-[node name="Plate" parent="ItemsBag" instance=ExtResource( 3 )]
-transform = Transform( -2.58088e-08, -0.590437, -0.807084, 1, -4.37114e-08, 0, -3.52788e-08, -0.807084, 0.590437, -3.91673, 1.86956, -9.18118 )
+[node name="MugItem" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( 0.38307, 0, 0.923719, 0, 1, 0, -0.923719, 0, 0.38307, -0.458323, 2.06218, -8.76992 )
 
-[node name="Plate2" parent="ItemsBag" instance=ExtResource( 3 )]
-transform = Transform( -2.88851e-08, -0.660814, -0.75055, 1, -4.37114e-08, 0, -3.28076e-08, -0.75055, 0.660814, -3.68737, 1.86956, -8.95539 )
+[node name="MugItem2" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( 0.74921, 0, 0.662332, 0, 1, 0, -0.662332, 0, 0.74921, -0.793766, 2.06218, -10.6168 )
 
-[node name="Plate3" parent="ItemsBag" instance=ExtResource( 3 )]
-transform = Transform( -2.88851e-08, -0.660814, -0.75055, 1, -4.37114e-08, 0, -3.28076e-08, -0.75055, 0.660814, -3.37621, 1.86956, -8.85923 )
+[node name="MugItem3" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( 0.318662, 0, 0.947869, 0, 1, 0, -0.947869, 0, 0.318662, -5.45112, 3.62234, -12.4077 )
 
-[node name="Plate4" parent="ItemsBag" instance=ExtResource( 3 )]
-transform = Transform( -2.88851e-08, -0.660814, -0.75055, 1, -4.37114e-08, 0, -3.28076e-08, -0.75055, 0.660814, -3.15855, 1.86956, -8.63399 )
+[node name="MugItem4" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( -0.999648, 0, 0.0265437, 0, 1, 0, -0.0265437, 0, -0.999648, -5.18787, 3.62234, -12.1192 )
 
-[node name="Plate5" parent="ItemsBag" instance=ExtResource( 3 )]
-transform = Transform( -3.14486e-08, -0.719461, -0.694533, 1, -4.37114e-08, 0, -3.0359e-08, -0.694533, 0.719461, -2.88022, 1.86956, -8.47451 )
+[node name="MugItem5" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( 0.550933, 0, 0.83455, 0, 1, 0, -0.83455, 0, 0.550933, -8.12788, 4.39573, -12.2906 )
 
-[node name="Mug" parent="ItemsBag" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.10382, 1.73853, -8.046 )
+[node name="MugItem6" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( 0.990983, 0, -0.133986, 0, 1, 0, 0.133986, 0, 0.990983, -4.43715, 2.07043, -12.1588 )
 
-[node name="Mug2" parent="ItemsBag" instance=ExtResource( 4 )]
-transform = Transform( 0.318662, 0, 0.947869, 0, 1, 0, -0.947869, 0, 0.318662, -5.23928, 3.62234, -12.2616 )
+[node name="MugItem7" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( -0.590733, 0, -0.806868, 0, 1, 0, 0.806868, 0, -0.590733, -8.58303, 0.253957, -10.973 )
 
-[node name="Mug3" parent="ItemsBag" instance=ExtResource( 4 )]
-transform = Transform( -0.999648, 0, 0.0265437, 0, 1, 0, -0.0265437, 0, -0.999648, -4.97603, 3.62234, -11.9731 )
+[node name="MugItem8" parent="ItemsBag" instance=ExtResource( 4 )]
+transform = Transform( 0.990983, 0, -0.133986, 0, 1, 0, 0.133986, 0, 0.990983, -5.30099, 2.26584, -11.9161 )
 
 [node name="BookItem" parent="ItemsBag" instance=ExtResource( 9 )]
-transform = Transform( 0.932582, 0, 0.360957, 0, 1, 0, -0.360957, 0, 0.932582, -5.65158, 1.8911, -9.01246 )
+transform = Transform( 3.76986e-08, 0.862443, 0.506154, 1, -4.37114e-08, 0, 2.21247e-08, 0.506154, -0.862443, -1.6096, 1.98131, -7.57259 )
+
+[node name="BookItem2" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.0442124, 0, 0.999022, 0, 1, 0, -0.999022, 0, -0.0442124, 1.26261, 4.4349, -5.45354 )
+
+[node name="BookItem3" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.0389984, 0, 0.999239, 0, 1, 0, -0.999239, 0, -0.0389984, 1.23018, 4.4349, -5.69961 )
+
+[node name="BookItem4" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( -0.00855219, 0, 0.999963, 0, 1, 0, -0.999964, 0, -0.00855219, 1.29234, 4.4349, -5.9525 )
+
+[node name="BookItem5" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 0.843757, 0, -0.536725, 0, 1, 0, 0.536725, 0, 0.843757, -9.31548, 2.29514, -12.0891 )
+
+[node name="BookItem6" parent="ItemsBag" instance=ExtResource( 9 )]
+transform = Transform( 2.96108e-08, 0.677415, -0.735601, 1, -4.37114e-08, 0, -3.21541e-08, -0.735601, -0.677415, -5.28115, 0.166335, -11.8593 )
 
 [node name="PlateItem" parent="ItemsBag" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.39459, 3.51891, -12.1117 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.54614, 3.51891, -12.1425 )
 
 [node name="PlateItem2" parent="ItemsBag" instance=ExtResource( 3 )]
-transform = Transform( 0.907865, 0, 0.419262, 0, 1, 0, -0.419262, 0, 0.907865, -6.39459, 3.7005, -12.1117 )
+transform = Transform( 0.907865, 0, 0.419262, 0, 1, 0, -0.419262, 0, 0.907865, -6.54614, 3.7005, -12.1425 )
 
 [node name="PlateItem3" parent="ItemsBag" instance=ExtResource( 3 )]
-transform = Transform( 0.810625, 0, -0.585566, 0, 1, 0, 0.585566, 0, 0.810625, -6.39459, 3.88477, -12.1117 )
+transform = Transform( 0.810625, 0, -0.585566, 0, 1, 0, 0.585566, 0, 0.810625, -6.54614, 3.88477, -12.1425 )
+
+[node name="PlateItem4" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38239, 1.95533, -10.0209 )
+
+[node name="PlateItem5" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( 0.454986, 0, 0.890499, 0, 1, 0, -0.890499, 0, 0.454986, -0.326602, 1.95533, -8.13051 )
+
+[node name="PlateItem6" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( 0.861372, 0, -0.507975, 0, 1, 0, 0.507975, 0, 0.861372, -1.63101, 1.95533, -8.66972 )
+
+[node name="PlateItem7" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( -0.561419, 0, 0.827532, 0, 1, 0, -0.827532, 0, -0.561419, -8.99902, 3.51891, -12.0904 )
+
+[node name="PlateItem8" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( 0.111001, 0, 0.99382, 0, 1, 0, -0.99382, 0, 0.111001, -8.99902, 3.69764, -12.0904 )
+
+[node name="PlateItem9" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( 0.0269447, 0, 0.999637, 0, 1, 0, -0.999637, 0, 0.0269447, -7.68772, 3.51891, -12.1478 )
+
+[node name="PlateItem10" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( 0.0269447, 0, 0.999637, 0, 1, 0, -0.999637, 0, 0.0269447, -8.41183, 1.92478, -11.9144 )
+
+[node name="PlateItem11" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( -0.788773, 0, 0.614685, 0, 1, 0, -0.614685, 0, -0.788773, -5.30221, 1.92478, -11.9144 )
+
+[node name="PlateItem12" parent="ItemsBag" instance=ExtResource( 3 )]
+transform = Transform( -0.788773, 0, 0.614685, 0, 1, 0, -0.614685, 0, -0.788773, -5.30221, 2.05122, -11.9144 )
+
+[node name="CanItem" parent="ItemsBag" instance=ExtResource( 27 )]
+transform = Transform( 0.955931, 0, 0.29359, 0, 1, 0, -0.29359, 0, 0.955931, 1.32085, 4.27976, -6.59489 )
+
+[node name="CanItem2" parent="ItemsBag" instance=ExtResource( 27 )]
+transform = Transform( -0.382055, 0, -0.92414, 0, 1, 0, 0.92414, 0, -0.382055, 1.40386, 4.27976, -7.13685 )
+
+[node name="CanItem3" parent="ItemsBag" instance=ExtResource( 27 )]
+transform = Transform( -0.218126, 0, 0.975921, 0, 1, 0, -0.975921, 0, -0.218126, -5.24468, 4.47545, -12.3448 )
+
+[node name="CanItem4" parent="ItemsBag" instance=ExtResource( 27 )]
+transform = Transform( -0.987016, 0, 0.160622, 0, 1, 0, -0.160622, 0, -0.987016, -9.19042, 4.47545, -12.3448 )
+
+[node name="CanItem5" parent="ItemsBag" instance=ExtResource( 27 )]
+transform = Transform( 0.799569, 0, 0.600574, 0, 1, 0, -0.600574, 0, 0.799569, -8.75589, 4.47545, -12.1566 )
+
+[node name="CanItem6" parent="ItemsBag" instance=ExtResource( 27 )]
+transform = Transform( 0.267003, 0, 0.963696, 0, 1, 0, -0.963696, 0, 0.267003, -7.61093, 4.47545, -12.301 )
+
+[node name="CanItem7" parent="ItemsBag" instance=ExtResource( 27 )]
+transform = Transform( -0.951611, 0, -0.307307, 0, 1, 0, 0.307307, 0, -0.951611, -8.80486, 1.24746, -10.8669 )
+
+[node name="CanItem8" parent="ItemsBag" instance=ExtResource( 27 )]
+transform = Transform( 0.5393, 0, -0.842114, 0, 1, 0, 0.842114, 0, 0.5393, -9.23138, 0.346807, -10.4094 )
+
+[node name="CanItem9" parent="ItemsBag" instance=ExtResource( 27 )]
+transform = Transform( 0.262694, 0, -0.964879, 0, 1, 0, 0.964879, 0, 0.262694, -8.99118, 0.346807, -8.32909 )
+
+[node name="CanItem10" parent="ItemsBag" instance=ExtResource( 27 )]
+transform = Transform( -0.992587, 0, 0.121541, 0, 1, 0, -0.121541, 0, -0.992587, -8.99118, 0.346807, -9.52935 )
+
+[node name="CanItem11" parent="ItemsBag" instance=ExtResource( 27 )]
+transform = Transform( 0.983264, 0, -0.182184, 0, 1, 0, 0.182184, 0, 0.983264, -8.56139, 0.346807, -9.11696 )
+
+[node name="CanItem12" parent="ItemsBag" instance=ExtResource( 27 )]
+transform = Transform( 0.983264, 0, -0.182184, 0, 1, 0, 0.182184, 0, 0.983264, -4.43807, 0.346807, -11.7925 )
+
+[node name="CanItem13" parent="ItemsBag" instance=ExtResource( 27 )]
+transform = Transform( -0.00881413, 0, -0.999961, 0, 1, 0, 0.999961, 0, -0.00881413, -8.35882, 4.89291, -5.75136 )
+
+[node name="CanItem14" parent="ItemsBag" instance=ExtResource( 27 )]
+transform = Transform( -0.00881413, 0, -0.999961, 0, 1, 0, 0.999961, 0, -0.00881413, -8.47102, 3.73231, -5.79343 )
+
+[node name="CanItem15" parent="ItemsBag" instance=ExtResource( 27 )]
+transform = Transform( -0.983404, 0, -0.181429, 0, 1, 0, 0.181429, 0, -0.983404, -9.17789, 3.73231, -7.29183 )
+
+[node name="CanItem16" parent="ItemsBag" instance=ExtResource( 27 )]
+transform = Transform( -0.983404, 0, -0.181429, 0, 1, 0, 0.181429, 0, -0.983404, -8.58445, 0.471176, -7.29183 )
+
+[node name="CanItem17" parent="ItemsBag" instance=ExtResource( 27 )]
+transform = Transform( 0.279293, 0, 0.960206, 0, 1, 0, -0.960206, 0, 0.279293, -8.17169, 0.471176, -7.04817 )
+
+[node name="CanItem18" parent="ItemsBag" instance=ExtResource( 27 )]
+transform = Transform( -0.517564, 0, 0.855644, 0, 1, 0, -0.855644, 0, -0.517564, -8.52254, 0.472732, -6.72965 )
+
+[node name="CanItem19" parent="ItemsBag" instance=ExtResource( 27 )]
+transform = Transform( -0.415757, 0, -0.909476, 0, 1, 0, 0.909476, 0, -0.415757, -8.6002, 0.472732, -5.75334 )
+
+[node name="JarItem" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( -0.206563, 0, 0.978433, 0, 1, 0, -0.978433, 0, -0.206563, 1.41701, 4.28069, -8.15112 )
+
+[node name="JarItem2" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( 0.540989, 0, 0.84103, 0, 1, 0, -0.84103, 0, 0.540989, 1.20908, 4.28069, -8.59198 )
+
+[node name="JarItem3" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( -0.121211, 0, 0.992627, 0, 1, 0, -0.992627, 0, -0.121211, 1.45205, 4.28069, -9.00039 )
+
+[node name="JarItem4" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( -0.927256, 0, -0.374429, 0, 1, 0, 0.374429, 0, -0.927256, -6.81354, 4.49396, -12.3695 )
+
+[node name="JarItem5" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( -0.898893, 0, 0.438167, 0, 1, 0, -0.438167, 0, -0.898893, -6.41109, 4.49396, -12.1517 )
+
+[node name="JarItem6" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( -0.993649, 0, -0.112527, 0, 1, 0, 0.112527, 0, -0.993649, -5.94752, 4.49396, -12.3327 )
+
+[node name="JarItem7" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( -0.695737, 0, -0.718296, 0, 1, 0, 0.718296, 0, -0.695737, -8.38224, 3.67714, -12.3327 )
+
+[node name="JarItem8" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( -0.898893, 0, 0.438167, 0, 1, 0, -0.438167, 0, -0.898893, -5.40019, 1.25941, -12.1517 )
+
+[node name="JarItem9" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( -0.756436, 0, 0.654068, 0, 1, 0, -0.654068, 0, -0.756436, -9.13664, 1.25941, -10.2765 )
+
+[node name="JarItem10" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( 0.715473, 0, -0.69864, 0, 1, 0, 0.69864, 0, 0.715473, -9.05098, 4.87424, -5.83962 )
+
+[node name="JarItem12" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( -0.464687, 0, -0.885475, 0, 1, 0, 0.885475, 0, -0.464687, -8.75234, 4.87424, -6.25858 )
+
+[node name="JarItem11" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( -0.194405, 0, -0.980921, 0, 1, 0, 0.980921, 0, -0.194405, -9.30361, 4.87424, -6.40318 )
+
+[node name="JarItem13" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( 0.490585, 0, -0.871393, 0, 1, 0, 0.871393, 0, 0.490585, -9.33898, 2.15845, -11.311 )
+
+[node name="JarItem14" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( 0.85445, 0, -0.519534, 0, 1, 0, 0.519534, 0, 0.85445, -8.98917, 2.66983, -5.94273 )
+
+[node name="JarItem15" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( -0.724027, 0, -0.689771, 0, 1, 0, 0.689771, 0, -0.724027, -8.42099, 2.66983, -5.77553 )
+
+[node name="JarItem16" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( 0.852348, 0, -0.522974, 0, 1, 0, 0.522974, 0, 0.852348, -8.95679, 3.76853, -5.91891 )
+
+[node name="JarItem17" parent="ItemsBag" instance=ExtResource( 28 )]
+transform = Transform( -0.783834, 0, -0.62097, 0, 1, 0, 0.62097, 0, -0.783834, -8.87697, 3.76853, -6.50841 )
+
+[node name="BreadItem" parent="ItemsBag" instance=ExtResource( 32 )]
+transform = Transform( 0.299741, 0, -0.95402, 0, 1, 0, 0.95402, 0, 0.299741, -9.247, 2.15826, -10.443 )
+
+[node name="WazeItem" parent="ItemsBag" instance=ExtResource( 29 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.990085, 2.29548, -9.29075 )
+
+[node name="WatermelonItem" parent="ItemsBag" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 0.978556, 0.205982, 0, -0.205982, 0.978556, -8.52305, 1.76256, -6.9986 )
+
+[node name="CheeseItem" parent="ItemsBag" instance=ExtResource( 31 )]
+transform = Transform( 0.465491, 0, -0.885052, 0, 1, 0, 0.885052, 0, 0.465491, -8.88456, 2.66983, -6.98956 )
+
+[node name="CheeseItem3" parent="ItemsBag" instance=ExtResource( 31 )]
+transform = Transform( -0.861141, 0, -0.508365, 0, 1, 0, 0.508365, 0, -0.861141, -8.56774, 3.67469, -7.03308 )
+
+[node name="CheeseItem2" parent="ItemsBag" instance=ExtResource( 31 )]
+transform = Transform( -0.766986, 0, 0.641663, 0, 1, 0, -0.641663, 0, -0.766986, -8.51083, 1.43049, -6.00316 )
+
+[node name="CheeseItem4" parent="ItemsBag" instance=ExtResource( 31 )]
+transform = Transform( -0.131858, 0, -0.991268, 0, 1, 0, 0.991268, 0, -0.131858, -8.5055, 2.66983, -7.02517 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.04552, 1.07807, -6.66997 )
 
 [node name="CameraBoom" parent="Player" instance=ExtResource( 2 )]
 transform = Transform( -0.377421, -0.654811, 0.654811, 0, 0.707107, 0.707107, -0.926042, 0.266877, -0.266877, 0, 0, 0 )
+
+[connection signal="ready" from="Kitchen/Kitchen/Ceiling" to="Kitchen/Kitchen/Ceiling" method="set_visible" binds= [ true ]]
+[connection signal="ready" from="Longue/Longue/Ceiling" to="Longue/Longue/Ceiling" method="set_visible" binds= [ true ]]
+[connection signal="ready" from="Bedroom/Bedroom/Ceiling" to="Bedroom/Bedroom/Ceiling" method="set_visible" binds= [ true ]]

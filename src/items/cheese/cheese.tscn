@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://materials/tileset.material.tres" type="Material" id=1]
+[ext_resource path="res://items/item_base/item_base.tscn" type="PackedScene" id=2]
+[ext_resource path="res://items/cheese/cheese_model.gltf" type="PackedScene" id=3]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -0.35767, -0.189514, 0.25193, -0.35767, -0.189514, 0.25193, -0.35767, -0.189514, 0.25193, -0.35767, 0.189514, 0.25193, -0.35767, 0.189514, 0.25193, -0.35767, 0.189514, 0.25193, -0.35767, -0.189514, -0.25193, -0.35767, -0.189514, -0.25193, -0.35767, -0.189514, -0.25193, -0.35767, 0.189514, -0.25193, -0.35767, 0.189514, -0.25193, -0.35767, 0.189514, -0.25193, 0.35767, 0.189514, -1.19209e-07, 0.35767, 0.189514, -1.19209e-07, 0.35767, 0.189514, -1.19209e-07, 0.35767, 0.189514, -1.19209e-07, -0.384797, -0.189514, -2.98023e-08, -0.384797, -0.189514, -2.98023e-08, -0.384797, -0.189514, -2.98023e-08, -0.384797, -0.189514, -2.98023e-08, -0.384797, 0.189514, -2.98023e-08, -0.384797, 0.189514, -2.98023e-08, -0.384797, 0.189514, -2.98023e-08, -0.384797, 0.189514, -2.98023e-08, 0.35767, -0.189514, -1.19209e-07, 0.35767, -0.189514, -1.19209e-07, 0.35767, -0.189514, -1.19209e-07, 0.35767, -0.189514, -1.19209e-07 )
+
+[node name="CheeseItem" instance=ExtResource( 2 )]
+move_score = 100
+
+[node name="CheeseModel" parent="." index="0" instance=ExtResource( 3 )]
+
+[node name="Cheese" parent="CheeseModel" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+material/0 = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="." index="1"]
+shape = SubResource( 1 )
+
+[editable path="CheeseModel"]
