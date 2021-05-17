@@ -6,9 +6,10 @@ func _ready() -> void:
 	GameState.connect("game_ended", self, "_on_game_ended")
 	GameState.game_start(round_time)
 	get_tree().set_pause(true)
+	Transition.fade_in()
 
 func _on_game_ready() -> void:
 	get_tree().set_pause(false)
 
 func _on_game_ended() -> void:
-	get_tree().set_pause(true)
+	Transition.fade_out()
