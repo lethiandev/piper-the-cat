@@ -62,6 +62,12 @@ func _physics_process(p_delta: float) -> void:
 			var body = collision.collider as RigidBody
 			var origin = collision.position - body.global_transform.origin
 			body.apply_impulse(origin, -collision.normal * PUSH * p_delta)
+	
+	# Rotate skin
+	var angle = Vector2(-motion_axis.x, motion_axis.z).angle()
+	var rotated = Basis().rotated(Vector3.UP, angle + PI / 2)
+	var old = $PiperSkin.global_transform.basis
+	$PiperSkin.global_transform.basis = old.slerp(rotated, 20.0 * p_delta)
 
 func _get_motion_velocity(p_delta: float) -> Vector3:
 	var next_motion_axis = _get_motion_axis()
