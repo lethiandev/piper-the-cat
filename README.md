@@ -10,6 +10,9 @@ This game is still unfinished and buggy, if you experience performance loss on t
 Game made for 80th MiniJam's game jam -
 https://itch.io/jam/mini-jam-80-cats
 
+Game page on itch.io -
+https://lethiandev.itch.io/piper-the-cat
+
 ## Controls
 
 WASD - Movement
