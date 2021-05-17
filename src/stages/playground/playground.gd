@@ -15,5 +15,6 @@ func _on_game_ready() -> void:
 func _on_game_ended() -> void:
 	get_tree().set_pause(true)
 	$AudioStreamPlayer.stop()
-	yield(get_tree().create_timer(1.0), "timeout")
-	Transition.fade_out()
+	yield(get_tree().create_timer(2.0), "timeout")
+	yield(Transition.fade_out(), "completed")
+	get_tree().change_scene("res://stages/menu/menu.tscn")
