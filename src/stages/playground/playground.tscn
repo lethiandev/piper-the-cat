@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=2]
+[gd_scene load_steps=71 format=2]
 
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player/camera.tscn" type="PackedScene" id=2]
@@ -34,6 +34,7 @@
 [ext_resource path="res://items/bread/bread.tscn" type="PackedScene" id=32]
 [ext_resource path="res://furnitures/bed/bed.tscn" type="PackedScene" id=33]
 [ext_resource path="res://items/ball/ball.tscn" type="PackedScene" id=34]
+[ext_resource path="res://stages/playground/music.mp3" type="AudioStream" id=35]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -151,6 +152,10 @@ extents = Vector3( 0.125, 0.5, 4 )
 
 [node name="PlaygroundStage" type="Node"]
 script = ExtResource( 7 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 35 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 101
