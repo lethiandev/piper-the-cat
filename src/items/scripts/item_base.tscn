@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://items/scripts/item_base.gd" type="Script" id=1]
+
+[node name="ItemBase" type="RigidBody" groups=[
+"items",
+]]
+input_ray_pickable = false
+mode = 1
+contacts_reported = 3
+contact_monitor = true
+sleeping = true
+script = ExtResource( 1 )

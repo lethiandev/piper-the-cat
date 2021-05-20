@@ -8,10 +8,26 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "RigidBody",
+"class": "ItemBase",
+"language": "GDScript",
+"path": "res://items/scripts/item_base.gd"
+}, {
+"base": "ItemBase",
+"class": "ItemShatterable",
+"language": "GDScript",
+"path": "res://items/scripts/item_shatterable.gd"
+} ]
+_global_script_class_icons={
+"ItemBase": "",
+"ItemShatterable": ""
+}
+
 [application]
 
 config/name="Piper The Cat"
-run/main_scene="res://stages/menu/menu.tscn"
+run/main_scene="res://stages/house_a/house_a.tscn"
 config/icon="res://icon.png"
 
 [autoload]

@@ -5,7 +5,7 @@ const ACCELERATION = 4.0
 const DECELERATION = 6.0
 const MAX_SPEED = 5
 const JUMP_SPEED = 6
-const PUSH = 50
+const PUSH = 250
 
 var motion_axis = Vector3()
 var motion_velocity = Vector3()
@@ -61,7 +61,16 @@ func _physics_process(p_delta: float) -> void:
 		if collision.collider is RigidBody:
 			var body = collision.collider as RigidBody
 			var origin = collision.position - body.global_transform.origin
-			body.apply_impulse(origin, -collision.normal * PUSH * p_delta)
+			if origin.y - 0.2 < 0:
+				var target = (-collision.normal + Vector3(0, 0.5, 0)).normalized()
+				body.apply_impulse(origin, target * PUSH * p_delta)
+	
+	# Handle colliding with items
+	for index in range(get_slide_count()):
+		var coll = get_slide_collision(index)
+		var body = coll.collider as RigidBody
+		if body and body.is_in_group("items"):
+			body.touch()
 	
 	# Rotate skin
 	var angle = Vector2(-motion_axis.x, motion_axis.z).angle()
