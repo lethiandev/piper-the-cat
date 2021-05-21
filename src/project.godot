@@ -83,3 +83,4 @@ quality/filters/msaa=2
 quality/depth/hdr=false
 environment/default_environment="res://default_env.tres"
 quality/dynamic_fonts/use_oversampling=false
+quality/filters/msaa.web=false
