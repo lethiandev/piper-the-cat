@@ -42,7 +42,7 @@ func _physics_process(p_delta: float) -> void:
 		yspeed = 0
 		air_time = 0
 	
-	if is_on_ceiling():
+	if is_on_ceiling() and yspeed > 0:
 		is_jumping = false
 		yspeed = 0
 	
