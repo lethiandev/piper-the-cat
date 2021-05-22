@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/placeholder.png-ffc7e6947e63a34681cfa9628a8422d5.s3tc.stex"
-path.etc="res://.import/placeholder.png-ffc7e6947e63a34681cfa9628a8422d5.etc.stex"
+path.s3tc="res://.import/placeholder.png-38e11cab83ffb147c217dc7b7abd8c36.s3tc.stex"
+path.etc="res://.import/placeholder.png-38e11cab83ffb147c217dc7b7abd8c36.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://tilesets/house/materials/textures/placeholder.png"
-dest_files=[ "res://.import/placeholder.png-ffc7e6947e63a34681cfa9628a8422d5.s3tc.stex", "res://.import/placeholder.png-ffc7e6947e63a34681cfa9628a8422d5.etc.stex" ]
+source_file="res://props/kitchen/materials/textures/placeholder.png"
+dest_files=[ "res://.import/placeholder.png-38e11cab83ffb147c217dc7b7abd8c36.s3tc.stex", "res://.import/placeholder.png-38e11cab83ffb147c217dc7b7abd8c36.etc.stex" ]
 
 [params]
 
