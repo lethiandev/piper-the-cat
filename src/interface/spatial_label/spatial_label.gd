@@ -10,7 +10,13 @@ export var modulate: Color = Color.white \
 
 func _process(p_delta: float) -> void:
 	var camera = get_viewport().get_camera()
-	var unprojected = camera.unproject_position(global_transform.origin)
+	var origin = get_global_transform().origin
+	var unprojected = camera.unproject_position(origin)
+	
+	if camera.is_position_behind(origin):
+		unprojected = unprojected.normalized() * Vector2(-1.0, 1.0)
+		unprojected *= get_viewport().get_size().length()
+	
 	_set_label_position(unprojected)
 
 func _set_label_position(p_position: Vector2) -> void:
