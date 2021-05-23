@@ -1,0 +1,24 @@
+[remap]
+
+importer="texture_array"
+type="TextureArray"
+path="res://.import/house_a.png-587a400f82d99950a2d769ce28c6270e.texarr"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://stages/house_a/lightmap/house_a.png"
+dest_files=[ "res://.import/house_a.png-587a400f82d99950a2d769ce28c6270e.texarr" ]
+
+[params]
+
+compress/mode=0
+compress/no_bptc_if_rgb=false
+flags/repeat=false
+flags/filter=true
+flags/mipmaps=false
+flags/srgb=false
+slices/horizontal=1
+slices/vertical=5
