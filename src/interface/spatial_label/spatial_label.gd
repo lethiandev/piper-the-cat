@@ -5,6 +5,9 @@ export var offset = Vector2()
 export var text: String = "" \
 	setget set_text, get_text
 
+export var modulate: Color = Color.white \
+	setget set_modulate, get_modulate
+
 func _process(p_delta: float) -> void:
 	var camera = get_viewport().get_camera()
 	var unprojected = camera.unproject_position(global_transform.origin)
@@ -19,3 +22,9 @@ func set_text(p_text: String) -> void:
 
 func get_text() -> String:
 	return $ProxyLabel.text
+
+func set_modulate(p_modulate: Color) -> void:
+	$ProxyLabel.modulate = p_modulate
+
+func get_modulate() -> Color:
+	return $ProxyLabel.modulate
